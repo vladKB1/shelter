@@ -1,0 +1,49 @@
+.header {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+
+	width: 100%;
+
+	&__content {
+		@include flex(space-between);
+	}
+}	
+
+.logo {	
+	@include flex(space-between, center, column);
+	height: 60px;
+
+	&__title {
+		font-size: 32px;
+		line-height: 110%;		
+
+		color: $logo-title-color;		
+	}
+
+	&__subtitle {	
+		font-size: 13px;
+		line-height: 15px;
+		letter-spacing: 0.1em;
+
+		color: $logo-subtitle-color;
+	}
+}
+.main-nav {
+	@include flex(space-between);
+	column-gap: 35px;
+	list-style: none;	
+
+	&__link {
+		position: relative;
+		color: $light-subtitle-color;
+		cursor: pointer;
+
+		&_active {
+			border-bottom: 3px solid $active-color;
+			color: $light-active-subtitle-color;			
+		}		
+	}
+}

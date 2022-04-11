@@ -7,3 +7,53 @@
 	font-family: Georgia;
 	src: url('../../../../assets//fonts//georgia.ttf');
 }
+
+.title {
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 130%;	
+	letter-spacing: 0.06em;
+
+	color: $title-color;
+}
+
+h2.title {
+	font-size: 44px; 
+}
+
+h4.title {		
+	font-size: 20px;
+	line-height: 115%;
+}	
+
+h5.title {		
+	font-size: 15px;
+	line-height: 110%;
+}	
+
+.title_light {
+	color: $light-title-color;
+}
+
+.subtitle {
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 160%;
+
+	color: $subtitle-color;
+
+	&-s {
+		font-style: italic; 
+		font-size: 12px;
+		line-height: 150%;
+		color: $subtitle-s-color;
+	}
+}
+
+.subtitle_light {
+	color: $light-subtitle-color;
+}
