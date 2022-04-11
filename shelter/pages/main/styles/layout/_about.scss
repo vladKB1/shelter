@@ -1,0 +1,24 @@
+.about-container {
+	padding: 80px 40px 100px 40px;
+}
+
+.about {
+	@include flex(center);
+	column-gap: 120px;
+	padding: 0 175px;
+
+	&__img {
+
+	}
+
+	&__content {
+		@include flex(space-between, flex-start, column);
+		row-gap: 25px;		
+	}
+
+	&__title {
+		padding-right: 60px;
+	}
+
+	&__description {}
+}
