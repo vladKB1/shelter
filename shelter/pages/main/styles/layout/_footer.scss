@@ -45,10 +45,15 @@
 	background-image: url("/shelter/assets/icons/icon-phone.svg")	
 }
 
-.location {
+.location {	
+	row-gap: unset;
+	min-height: 234px;
+	
 	&__item {
 		@include flex(space-between);
 		column-gap: 20px;
+		cursor: pointer;
+		text-decoration: none;
 	}	
 }
 
@@ -59,8 +64,7 @@
 }
 
 
-.email-icon, .tel-icon, .location-icon {
-	background-color: $footer-icon-color;
+.email-icon, .tel-icon, .location-icon {		
 	background-repeat: no-repeat;
 }
 

@@ -13,15 +13,25 @@
         <header class="header">
             <div class="container">
                 <div class="header__content">
-                    <div class="logo">
+                    <a class="logo" href="#">
                         <h1 class="title logo__title">Cozy Home</h1>
                         <p class="subtitle logo__subtitle">Shelter for pets in Boston</p>
-                    </div>
+                    </a>
                     <nav class="main-nav">
-                        <li class="subtitle main-nav__link main-nav__link_active">About the shelter</li>
-                        <li class="subtitle main-nav__link">Our pets</li>
-                        <li class="subtitle main-nav__link">Help the shelter</li>
-                        <li class="subtitle main-nav__link">Contacts</li>
+                        <ul class="nav-list">
+                            <li class="nav-list__item nav-list__item_active">
+                                <a class="subtitle nav-list__link" href="#">About the shelter</a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a class="subtitle nav-list__link" href="/shelter/pages/pets/index.html">Our pets</a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a class="subtitle nav-list__link" href="#help">Help the shelter</a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a class="subtitle nav-list__link" href="#footer">Contacts</a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>
@@ -36,7 +46,7 @@
                                 We offer to give a chance to a little and nice puppy with an extremely wide and open
                                 heart. He or she will love you more than anybody else in the world, you will see!
                             </p>
-                            <a href="#" class="button title button-title">Make a friend</a>
+                            <a href="#pets" class="button title button-title">Make a friend</a>
                         </div>
                         <img class="start-screen__img" src="../../assets/images/start-screen-puppy.png" alt="puppy" />
                     </div>
@@ -64,7 +74,7 @@
                     </div>
                 </div>
             </section>
-            <section class="pets-section">
+            <section class="pets-section" id="pets">
                 <div class="container pets-container">
                     <div class="pets">
                         <h3 class="title pets__title">Our friends who<br />are looking for a house</h3>
@@ -107,11 +117,13 @@
                             </ul>
                             <div class="round-button right-arrow"></div>
                         </div>
-                        <button class="button title button-title">Get to know the rest</button>
+                        <a class="button title button-title" href="/shelter/pages/pets/index.html"
+                            >Get to know the rest</a
+                        >
                     </div>
                 </div>
             </section>
-            <section class="help-section">
+            <section class="help-section" id="help">
                 <div class="container help-container">
                     <div class="help">
                         <h3 class="title help__title">How you can help<br />our shelter</h3>
@@ -183,7 +195,7 @@
                         <div class="donation__content">
                             <h3 class="title donation__title">You can also<br />make a donation</h3>
                             <h5 class="title donation__info">Name of the bank / Type of bank account</h5>
-                            <div class="donation-card">
+                            <div class="button donation-card">
                                 <div class="donation-card__icon"></div>
                                 <a class="donation-card__link" href="#"
                                     ><h4 class="title donation-card__number">8380 2880 8028 8791 7435</h4>
@@ -200,7 +212,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <div class="container footer-container">
                 <div class="footer-content">
                     <div class="footer-content__item contacts">
@@ -216,16 +228,16 @@
                     </div>
                     <div class="footer-content__item location">
                         <h3 class="title title_light location__title">We are waiting<br />for your visit</h3>
-                        <div class="location__item">
+                        <a class="location__item" target="_blank" href="https://goo.gl/maps/Nd3vCdR5hA9mJqNJ8">
                             <div class="location-icon"></div>
                             <h4 class="title location-address">
                                 1 Central Street, Boston<br />(entrance from the store)
                             </h4>
-                        </div>
-                        <div class="location__item">
+                        </a>
+                        <a class="location__item" target="_blank" href="https://goo.gl/maps/wVuwAP1SpZK8TBHQ6">
                             <div class="location-icon"></div>
                             <h4 class="title location-address">18 South Park, London</h4>
-                        </div>
+                        </a>
                     </div>
                     <img class="footer-content__img" src="../../assets/images/footer-puppy.png" alt="puppy" />
                 </div>

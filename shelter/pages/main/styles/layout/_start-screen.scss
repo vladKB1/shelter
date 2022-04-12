@@ -10,16 +10,12 @@
 }
 
 .start-screen {
-	@include flex(space-between);
-	column-gap: 42px;
+	@include flex(space-between, flex-start);	
+	column-gap: 42px;	
 
 	&__content {
 		@include flex(space-between, flex-start, column);
 		row-gap: 42px;
+		padding-top: 163px;
 	}
-		
-	&__button {		
-	}
-
-	&__img {}
 }

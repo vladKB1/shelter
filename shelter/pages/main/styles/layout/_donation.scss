@@ -27,9 +27,7 @@
 	@include flex(center);
 	min-height: 23px;
 	padding: 10px 15px;
-	border-radius: 9px;
-	background-color: $button-bg;	
-	cursor: pointer;
+	border-radius: 9px;	
 
 	&__link {
 		text-decoration: none;

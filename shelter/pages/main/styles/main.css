@@ -5,6 +5,8 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 /* Убираем внутренние отступы */
@@ -29,15 +31,6 @@ blockquote,
 dl,
 dd {
   margin: 0;
-}
-
-/* Выставляем основные настройки по-умолчанию для body */
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  padding: 0;
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
@@ -135,8 +128,14 @@ h5.title {
 }
 
 html {
-  -webkit-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  padding: 0;
+  text-rendering: optimizeSpeed;
 }
 
 .container {
@@ -151,40 +150,47 @@ html {
   border-radius: 100px;
   color: #292929;
   background-color: #F1CDB3;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .button:hover {
   background-color: #FDDCC4;
-  cursor: pointer;
 }
 
 .button-not-fill {
-  padding: 11px 41px;
+  padding: 13px 43px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   color: #292929;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .button-not-fill:hover {
+  border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
-  cursor: pointer;
 }
 
 .round-button {
   width: 56px;
   height: 52px;
-  border: 2px solid #f1cdb3;
+  border: 2px solid #F1CDB3;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .round-button:hover {
+  border: 2px solid #FDDCC4;
   background-color: #FDDCC4;
 }
 
 .round-button:active {
-  background-color: #FDDCC4;
+  border: 2px solid #F1CDB3;
+  background-color: #F1CDB3;
 }
 
 .header {
@@ -227,6 +233,8 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 60px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .logo__title {
@@ -242,7 +250,11 @@ html {
   color: #ffffff;
 }
 
-.main-nav {
+.logo:hover .logo__title {
+  color: #FDDCC4;
+}
+
+.nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,14 +273,25 @@ html {
   list-style: none;
 }
 
-.main-nav__link {
-  position: relative;
+.nav-list__link {
   color: #CDCDCD;
+  text-decoration: none;
+}
+
+.nav-list__link:hover {
+  color: #ffffff;
+}
+
+.nav-list__item {
+  position: relative;
   cursor: pointer;
 }
 
-.main-nav__link_active {
+.nav-list__item_active {
   border-bottom: 3px solid #f1cdb3;
+}
+
+.nav-list__item_active .nav-list__link {
   color: #FAFAFA;
 }
 
@@ -289,9 +312,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -315,6 +338,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 42px;
+  padding-top: 163px;
 }
 
 .about-container {
@@ -454,12 +478,14 @@ html {
 }
 
 .pets-card:hover {
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .pets-card:hover > .pets-card__button {
-  background-color: #FDDCC4;
+  border: 2px solid #F1CDB3;
+  background-color: #F1CDB3;
 }
 
 .help-container {
@@ -598,8 +624,6 @@ html {
   min-height: 23px;
   padding: 10px 15px;
   border-radius: 9px;
-  background-color: #F1CDB3;
-  cursor: pointer;
 }
 
 .donation-card__link {
@@ -701,6 +725,11 @@ html {
   background-image: url("/shelter/assets/icons/icon-phone.svg");
 }
 
+.location {
+  row-gap: unset;
+  min-height: 234px;
+}
+
 .location__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -717,6 +746,8 @@ html {
           flex-direction: row;
   -webkit-column-gap: 20px;
           column-gap: 20px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .location-icon {
@@ -726,7 +757,6 @@ html {
 }
 
 .email-icon, .tel-icon, .location-icon {
-  background-color: F1CDB3;
   background-repeat: no-repeat;
 }
 
