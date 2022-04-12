@@ -1,0 +1,50 @@
+.donation-section {	
+	background-color: $donation-section-color;
+}
+
+.donation-container {
+	padding: 80px 183px 100px;
+}
+
+.donation {
+	@include flex();
+	column-gap: 30px;
+
+	&__img {}
+
+	&__content {
+		@include flex(space-between, flex-start, column);
+		row-gap: 20px;
+	}
+
+	&__title {}
+
+
+	&__additional-info {}
+}
+
+.donation-card {
+	@include flex(center);
+	min-height: 23px;
+	padding: 10px 15px;
+	border-radius: 9px;
+	background-color: $button-bg;	
+	cursor: pointer;
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__number {
+		text-align: center;
+	}
+
+	&__icon {							
+		width: 45px;
+		height: 23px;
+		padding-right: 15px;
+		background-image: url("/shelter/assets/icons/credit-card.svg");
+		background-repeat: no-repeat;		
+	}
+}
+
