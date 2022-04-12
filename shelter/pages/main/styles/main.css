@@ -297,7 +297,7 @@ body {
 
 .start-screen-section {
   padding-top: 120px;
-  background: url("/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url("../../../assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   background-repeat: repeat;
 }
 
@@ -448,11 +448,11 @@ body {
 }
 
 .left-arrow {
-  background-image: url("/shelter/assets/icons/left-arrow.svg");
+  background-image: url("../../../assets/icons/left-arrow.svg");
 }
 
 .right-arrow {
-  background-image: url("/shelter/assets/icons/right-arrow.svg");
+  background-image: url("../../../assets/icons/right-arrow.svg");
 }
 
 .pets-card__link {
@@ -641,12 +641,12 @@ body {
   width: 45px;
   height: 23px;
   padding-right: 15px;
-  background-image: url("/shelter/assets/icons/credit-card.svg");
+  background-image: url("../../../assets/icons/credit-card.svg");
   background-repeat: no-repeat;
 }
 
 .footer {
-  background: url("/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url("../../../assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   background-repeat: repeat;
 }
 
@@ -719,13 +719,13 @@ body {
 .email-icon {
   width: 40px;
   height: 32px;
-  background-image: url("/shelter/assets/icons/icon-email.svg");
+  background-image: url("../../../assets/icons/icon-email.svg");
 }
 
 .tel-icon {
   width: 40px;
   height: 32px;
-  background-image: url("/shelter/assets/icons/icon-phone.svg");
+  background-image: url("../../../assets/icons/icon-phone.svg");
 }
 
 .location {
@@ -756,7 +756,7 @@ body {
 .location-icon {
   width: 22px;
   height: 32px;
-  background-image: url("/shelter/assets/icons/icon-marker.svg");
+  background-image: url("../../../assets/icons/icon-marker.svg");
 }
 
 .email-icon, .tel-icon, .location-icon {
