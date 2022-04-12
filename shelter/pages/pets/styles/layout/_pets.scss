@@ -7,7 +7,7 @@
 
 .pets {
 	@include flex(space-between, center, column);
-	row-gap: 45px;
+	row-gap: 60px;
 
 	&__title {	
 		text-align: center;	
@@ -16,7 +16,7 @@
 
 .pets-slider {
 	@include flex(space-between, center);	
-	width: 100%;
+	width: 100%;	
 
 	&__list {
 		@include flex(space-around, center);

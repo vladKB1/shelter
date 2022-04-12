@@ -368,7 +368,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 45px;
+  row-gap: 60px;
 }
 
 .pets__title {
