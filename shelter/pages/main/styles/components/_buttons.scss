@@ -1,6 +1,42 @@
 .button {
 	padding: 15px 45px;
+	border: none;
 	border-radius: 100px;
 	color: $button-title-color;
 	background-color: $button-bg;
+
+	&:hover {
+		background-color: $active-button-bg;
+		cursor: pointer;
+	}
+}
+
+.button-not-fill {
+	padding: 11px 41px;
+	border: 2px solid $button-bg;
+	border-radius: 100px;
+	color: $button-title-color;	
+
+	&:hover {
+		background-color: $active-button-bg;
+		cursor: pointer;
+	}
+}
+
+.round-button {
+	width: 56px;
+	height: 52px;	
+	border: 2px solid $active-color;
+	border-radius: 50%;
+
+	background-repeat: no-repeat;	
+	background-position: center;
+
+	&:hover {
+		background-color: $hover-button-bg;
+	}
+
+	&:active {
+		background-color: $active-button-bg;
+	}
 }

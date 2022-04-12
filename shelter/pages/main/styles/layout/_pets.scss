@@ -1,0 +1,51 @@
+.pets-section {
+	background-color: $pets-section-bg;
+}
+.pets-container {
+	padding: 80px 40px 100px 40px;
+}
+
+.pets {
+	@include flex(space-between, center, column);
+	row-gap: 60px;
+
+	&__title {	
+		text-align: center;	
+	}
+}
+
+.pets-slider {
+	@include flex(space-between, center);
+	width: 100%;
+
+	&__list {
+		@include flex(space-around, center);
+		width: 100%;
+	}
+}
+
+.left-arrow {
+	background-image: url("/shelter/assets/icons/left-arrow.svg");
+}
+
+.right-arrow {
+	background-image: url("/shelter/assets/icons/right-arrow.svg");
+}
+
+.pets-card {
+	@include flex(space-between, center, column);
+	row-gap: 30px;
+	min-height: 435px;
+	padding-bottom: 30px;
+
+	background-color: $pets-card-bg;
+	transition: all 0.5s linear;
+
+	&:hover {
+		box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+
+		> .pets-card__button {
+			background-color: $active-button-bg;
+		}
+	}
+}
