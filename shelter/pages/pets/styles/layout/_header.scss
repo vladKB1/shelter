@@ -1,0 +1,64 @@
+.header {
+	background-color: $header-bg;
+
+	&__content {
+		@include flex(space-between);
+	}
+}
+
+.header-container {
+	padding: 30px 40px;
+}
+
+.logo {	
+	@include flex(space-between, center, column);
+	height: 60px;
+	cursor: pointer;
+	text-decoration: none;
+
+	&__title {
+		font-size: 32px;
+		line-height: 110%;		
+	}
+
+	&__subtitle {	
+		font-size: 13px;
+		line-height: 15px;
+		letter-spacing: 0.1em;
+
+		color: $logo-subtitle-color;
+	}	
+}
+
+.logo:hover {
+	.logo__title {
+		color: $active-title-color;
+	}
+}
+
+.nav-list {	
+	@include flex(space-between);
+	column-gap: 35px;
+	list-style: none;	
+
+	&__link {					
+		color: $subtitle-color;		
+		text-decoration: none;
+
+		&:hover {
+			color: $dark-subtitle-hover-color;
+		}			
+	}
+
+	&__item {
+		position: relative;	
+		cursor: pointer;
+
+		&_active {
+			border-bottom: 3px solid $active-color;
+			.nav-list__link {
+				color: $dark-subtitle-active-color;			
+			}
+		}	
+	}
+}

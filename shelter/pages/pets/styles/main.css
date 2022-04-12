@@ -113,7 +113,7 @@ h5.title {
   font-weight: 400;
   font-size: 15px;
   line-height: 160%;
-  color: #4C4C4C;
+  color: #545454;
 }
 
 .subtitle-s {
@@ -194,12 +194,7 @@ body {
 }
 
 .header {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
+  background-color: #ffffff;
 }
 
 .header__content {
@@ -216,6 +211,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.header-container {
+  padding: 30px 40px;
 }
 
 .logo {
@@ -240,18 +239,17 @@ body {
 .logo__title {
   font-size: 32px;
   line-height: 110%;
-  color: #f1cdb3;
 }
 
 .logo__subtitle {
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.1em;
-  color: #ffffff;
+  color: #292929;
 }
 
 .logo:hover .logo__title {
-  color: #FDDCC4;
+  color: #292929;
 }
 
 .nav-list {
@@ -274,12 +272,12 @@ body {
 }
 
 .nav-list__link {
-  color: #CDCDCD;
+  color: #545454;
   text-decoration: none;
 }
 
 .nav-list__link:hover {
-  color: #ffffff;
+  color: #292929;
 }
 
 .nav-list__item {
@@ -292,97 +290,7 @@ body {
 }
 
 .nav-list__item_active .nav-list__link {
-  color: #FAFAFA;
-}
-
-.start-screen-section {
-  padding-top: 120px;
-  background: url("/shelter/assets/images/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-  background-repeat: repeat;
-}
-
-.start-screen-container {
-  padding-bottom: 0px;
-}
-
-.start-screen {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-column-gap: 42px;
-          column-gap: 42px;
-}
-
-.start-screen__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 42px;
-  padding-top: 163px;
-}
-
-.about-container {
-  padding: 80px 40px 100px 40px;
-}
-
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-column-gap: 120px;
-          column-gap: 120px;
-  padding: 0 175px;
-}
-
-.about__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 25px;
-}
-
-.about__title {
-  padding-right: 60px;
+  color: #292929;
 }
 
 .pets-section {
@@ -487,160 +395,6 @@ body {
 .pets-card:hover > .pets-card__button {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
-}
-
-.help-container {
-  padding: 80px 40px 100px 40px;
-}
-
-.help {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 431px;
-}
-
-.help__title {
-  text-align: center;
-}
-
-.help-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 55px 120px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0 87px;
-}
-
-.help-list__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 30px;
-}
-
-.help-list__item:nth-child(6) {
-  padding-left: 84px;
-}
-
-.help-list__item:last-child {
-  padding-right: 84px;
-}
-
-.help-icon {
-  width: 60px;
-  height: 60px;
-  fill: #F1CDB3;
-}
-
-.donation-section {
-  background-color: #F6F6F6;
-}
-
-.donation-container {
-  padding: 80px 183px 100px;
-}
-
-.donation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
-}
-
-.donation__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  row-gap: 20px;
-}
-
-.donation-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  min-height: 23px;
-  padding: 10px 15px;
-  border-radius: 9px;
-}
-
-.donation-card__link {
-  text-decoration: none;
-}
-
-.donation-card__number {
-  text-align: center;
-}
-
-.donation-card__icon {
-  width: 45px;
-  height: 23px;
-  padding-right: 15px;
-  background-image: url("/shelter/assets/icons/credit-card.svg");
-  background-repeat: no-repeat;
 }
 
 .footer {
