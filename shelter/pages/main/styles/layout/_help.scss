@@ -1,0 +1,40 @@
+.help-container {
+	padding: 80px 40px 100px 40px;
+}
+
+.help {
+	@include flex(space-between, center, column);
+	min-height: 431px;
+
+	&__title {
+		text-align: center;
+	}
+}
+
+.help-list {
+	@include flex(center);
+	gap: 55px 120px;
+	flex-wrap: wrap;
+	padding: 0 87px;
+
+	&__item {
+		@include flex(space-between, center, column);
+		row-gap: 30px;
+	}
+
+	&__item:nth-child(6) {
+		padding-left: 84px;
+	}
+
+	&__item:last-child {
+		padding-right: 84px;
+	}
+}
+
+.help-icon {
+	width: 60px;
+	height: 60px;
+	fill: $help-icon-color;
+
+	&__title {}
+}
