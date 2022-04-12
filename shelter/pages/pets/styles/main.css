@@ -173,10 +173,24 @@ body {
 }
 
 .round-button {
-  width: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
   border-radius: 50%;
+  color: #292929;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -191,6 +205,45 @@ body {
 .round-button:active {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
+}
+
+.round-button_nonactive {
+  color: #CDCDCD;
+  border: 2px solid #CDCDCD;
+  cursor: not-allowed;
+}
+
+.round-button_nonactive:hover, .round-button_nonactive:active {
+  background-color: transparent;
+  border: 2px solid #CDCDCD;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 340px;
+  text-align: center;
+}
+
+.pagination__index {
+  border: none;
+  background-color: #F1CDB3;
+}
+
+.pagination__index:hover {
+  background-color: #F1CDB3;
+  border: none;
 }
 
 .header {
@@ -315,7 +368,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 60px;
+  row-gap: 45px;
 }
 
 .pets__title {
@@ -352,18 +405,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  gap: 30px 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
-.left-arrow {
-  background-image: url("/shelter/assets/icons/left-arrow.svg");
-}
-
-.right-arrow {
-  background-image: url("/shelter/assets/icons/right-arrow.svg");
-}
-
-.pets-card {
+.pets-card__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -380,19 +428,21 @@ body {
   row-gap: 30px;
   min-height: 435px;
   padding-bottom: 30px;
+  cursor: pointer;
   border-radius: 9px;
   background-color: #FAFAFA;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
+  text-decoration: none;
 }
 
-.pets-card:hover {
+.pets-card__link:hover {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
-.pets-card:hover > .pets-card__button {
+.pets-card__link:hover > .pets-card__button {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
 }

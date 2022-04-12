@@ -30,10 +30,13 @@
 }
 
 .round-button {
-	width: 56px;
+	@include flex(center);
+	width: 52px;
 	height: 52px;	
 	border: 2px solid $button-bg;
+
 	border-radius: 50%;
+	color: $button-title-color;
 
 	background-repeat: no-repeat;
 	background-position: center;
@@ -48,5 +51,16 @@
 	&:active {
 		border: 2px solid $active-button-bg;
 		background-color: $active-button-bg;
+	}
+
+	&_nonactive {		
+		color: $nonactive-button-bg;
+		border: 2px solid $nonactive-button-bg;
+		cursor: not-allowed;
+
+		&:hover, &:active {
+			background-color: transparent;
+			border: 2px solid $nonactive-button-bg;
+		}
 	}
 }

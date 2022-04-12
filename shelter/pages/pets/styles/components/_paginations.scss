@@ -1,0 +1,24 @@
+.pagination {
+	@include flex(space-between);
+	min-width: 340px;
+	text-align: center;
+
+	&__first {}
+
+	&__left {}
+
+	&__index {
+		border: none;
+		background-color: $button-bg;
+
+		&:hover {
+			background-color: $button-bg;
+			border: none;
+		}
+	}
+
+	&__right {}
+
+	&__last {}
+}
+
