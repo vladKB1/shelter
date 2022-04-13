@@ -239,6 +239,7 @@ body {
 .pagination__index {
   border: none;
   background-color: #F1CDB3;
+  cursor: default;
 }
 
 .pagination__index:hover {

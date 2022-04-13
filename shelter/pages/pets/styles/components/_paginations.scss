@@ -10,6 +10,7 @@
 	&__index {
 		border: none;
 		background-color: $button-bg;
+		cursor: default;
 
 		&:hover {
 			background-color: $button-bg;
