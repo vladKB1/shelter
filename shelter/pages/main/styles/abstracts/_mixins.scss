@@ -4,3 +4,9 @@
 	align-items: $align;
 	flex-direction: $direction;
 }
+
+
+@mixin adaptive-value($property, $startSize, $minSize, $maxWidth, $minWidth) {
+	$addSize: $startSize - $minSize;	
+	#{$property}: calc(min(#{$startSize + px}, #{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth})));
+}

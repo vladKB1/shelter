@@ -65,4 +65,10 @@
 			}
 		}	
 	}
+	
+	@media (max-width: #{$medium - 1 + px}) {
+		display: none;
+	}
 }
+
+//burger-menu

@@ -17,7 +17,7 @@
 	line-height: 130%;	
 	letter-spacing: 0.06em;
 
-	color: $title-color;
+	color: $title-color;	
 }
 
 .button-title {
@@ -28,6 +28,10 @@
 h2.title {
 	font-size: 44px;
 	letter-spacing: normal;
+
+	@media (max-width: #{$medium - 1 + px}) {						
+		@include adaptive-value("font-size", 35, 25, $medium, $small);			
+	}
 }
 
 h4.title {		
