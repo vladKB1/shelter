@@ -203,8 +203,20 @@ body {
 }
 
 .round-button {
-  width: 56px;
-  height: 52px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 24px;
   border: 2px solid #F1CDB3;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -574,6 +586,22 @@ body {
   padding: 80px 40px 100px 40px;
 }
 
+@media (max-width: 1279px) {
+  .pets-container {
+    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .pets-container {
+    padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-bottom: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-left: calc(10px + 174 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 174 * ((100vw - 320px) / 448));
+  }
+}
+
 .pets {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,6 +621,12 @@ body {
 
 .pets__title {
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .pets {
+    row-gap: calc(42px + 18 * ((100vw - 320px) / 448));
+  }
 }
 
 .pets-slider {
@@ -628,12 +662,50 @@ body {
   width: 100%;
 }
 
+@media (max-width: 1080px) {
+  .pets-slider__list .pets-card:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets-slider {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px 80px;
+  }
+  .pets-slider__list {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .pets-slider__list .pets-card:nth-of-type(2) {
+    display: none;
+  }
+}
+
 .left-arrow {
   background-image: url("../../../assets/icons/left-arrow.svg");
 }
 
+@media (max-width: 767px) {
+  .left-arrow {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .right-arrow {
   background-image: url("../../../assets/icons/right-arrow.svg");
+}
+
+@media (max-width: 767px) {
+  .right-arrow {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 
 .pets-card__link {

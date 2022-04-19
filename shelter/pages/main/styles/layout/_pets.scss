@@ -3,6 +3,20 @@
 }
 .pets-container {
 	padding: 80px 40px 100px 40px;
+
+	@media (max-width: #{$large - 1 + px}) {	
+		@include adaptive-value("padding-left", 40, 30, $large, $medium);
+		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		@include adaptive-value("padding-top", 80, 42, $medium, $small);
+		@include adaptive-value("padding-bottom", 80, 42, $medium, $small);
+
+		@include adaptive-value("padding-left", 184, 10, $medium, $small);
+		@include adaptive-value("padding-right", 184, 10, $medium, $small);
+	}
+
 }
 
 .pets {
@@ -12,6 +26,10 @@
 	&__title {	
 		text-align: center;	
 	}
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("row-gap", 60, 42, $medium, $small);	
+	}
 }
 
 .pets-slider {
@@ -20,16 +38,45 @@
 
 	&__list {
 		@include flex(space-around, center);
-		width: 100%;
+		width: 100%;				
+	}
+
+	$slider-breakpoint: 1080;
+	@media (max-width: #{$slider-breakpoint + px}) {
+		&__list {
+			.pets-card:nth-of-type(3) {
+				display: none;
+			}
+		}
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		flex-wrap: wrap;	
+		gap: 20px 80px;
+		
+		&__list {
+			order: 1;
+
+			.pets-card:nth-of-type(2) {
+				display: none;
+			}
+		}		
 	}
 }
 
 .left-arrow {
-	background-image: url("../../../assets/icons/left-arrow.svg");
+	background-image: url("../../../assets/icons/left-arrow.svg");	
+
+	@media (max-width: #{$medium - 1 + px}) {
+		order: 2;
+	}
 }
 
 .right-arrow {
 	background-image: url("../../../assets/icons/right-arrow.svg");
+	@media (max-width: #{$medium - 1 + px}) {
+		order: 3;
+	}
 }
 
 .pets-card {
