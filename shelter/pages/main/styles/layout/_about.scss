@@ -1,5 +1,25 @@
-.about-container {
+$break-point: 1180;
+
+.about-container {	
 	padding: 80px 40px 100px 40px;
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-left", 40, 165, $large, $break-point);
+		@include adaptive-value("padding-right", 40, 165, $large, $break-point);
+	}
+	
+	@media (max-width: #{$break-point - 1 + px}) {
+		padding-left: 165px;		
+		padding-right: 165px;
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		@include adaptive-value("padding-top", 80, 42, $medium, $small);
+		@include adaptive-value("padding-bottom", 80, 42, $medium, $small);
+
+		@include adaptive-value("padding-left", 165, 10, $medium, $small);
+		@include adaptive-value("padding-right", 165, 10, $medium, $small);
+	}
 }
 
 .about {
@@ -7,18 +27,45 @@
 	column-gap: 120px;
 	padding: 0 175px;
 
-	&__img {
-
-	}
-
 	&__content {
 		@include flex(space-between, flex-start, column);
 		row-gap: 25px;		
 	}
 
-	&__title {
-		padding-right: 60px;
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-left", 175, 0, $large, $break-point);
+		@include adaptive-value("padding-right", 175, 0, $large, $break-point);
 	}
 
-	&__description {}
+	@media (max-width: #{$break-point - 1 + px}) {
+		flex-direction: column;
+		row-gap: 80px;
+		@include adaptive-value("padding-left", 206, 0, $break-point, $medium);
+		@include adaptive-value("padding-right", 206, 0, $break-point, $medium);
+		
+		&__img {
+			align-self: center;
+			order: 2;
+		}
+	}
+	
+	@media (max-width: #{$medium - 1 + px}) {
+		text-align: justify;
+		@include adaptive-value("row-gap", 80, 42, $medium, $small);
+		@include adaptive-value("padding-left", 0, 15, $medium, $small);
+		@include adaptive-value("padding-right", 0, 15, $medium, $small);
+
+		&__content {
+			align-items: center;
+			row-gap: 22px;
+		}
+
+		&__title {				
+			padding-bottom: 3px;
+		}
+
+		&__img {
+			@include adaptive-value("width", 300, 260, $medium, $small);
+		}
+	}
 }

@@ -1,3 +1,9 @@
+.header-container {
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("padding-right", 30, 53, $medium, $small);
+	}
+}
+
 .header {
 	position: absolute;
 	z-index: 1;

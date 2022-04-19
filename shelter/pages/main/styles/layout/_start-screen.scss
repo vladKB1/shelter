@@ -7,6 +7,10 @@
 	@media (max-width: #{$large - 1 + px}) {
 		@include adaptive-value("padding-top", 180, 150, $large, $medium);
 	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		padding-top: 150px;
+	}
 }
 
 .start-screen-container {
@@ -63,8 +67,7 @@
 		text-align: center;
 
 		&__content {
-			align-items: center;
-			padding-top: 0;	
+			align-items: center;			
 			@include adaptive-value("padding-left", 54, 0,  $medium, $small);
 			@include adaptive-value("padding-right", 54, 0, $medium, $small);						
 		}
