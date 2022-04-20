@@ -33,7 +33,7 @@
 }
 
 .pets-slider {
-	@include flex(space-between, center);
+	@include flex(center, center);
 	width: 100%;
 
 	&__list {

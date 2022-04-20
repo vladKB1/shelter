@@ -633,9 +633,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -748,6 +748,22 @@ body {
   padding: 80px 40px 100px 40px;
 }
 
+@media (max-width: 1279px) {
+  .help-container {
+    padding-left: calc(69px + -29 * ((100vw - 768px) / 512));
+    padding-right: calc(69px + -29 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .help-container {
+    padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-bottom: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-left: calc(15px + 54 * ((100vw - 320px) / 448));
+    padding-right: calc(15px + 54 * ((100vw - 320px) / 448));
+  }
+}
+
 .help {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -762,11 +778,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 431px;
+  row-gap: 60px;
 }
 
 .help__title {
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .help {
+    row-gap: calc(42px + 18 * ((100vw - 320px) / 448));
+  }
 }
 
 .help-list {
@@ -806,12 +828,39 @@ body {
   row-gap: 30px;
 }
 
-.help-list__item:nth-child(6) {
-  padding-left: 84px;
+@media (max-width: 1279px) {
+  .help-list {
+    -webkit-column-gap: calc(60px + 60 * ((100vw - 768px) / 512));
+            column-gap: calc(60px + 60 * ((100vw - 768px) / 512));
+    padding-left: calc(0px + 87 * ((100vw - 768px) / 512));
+    padding-right: calc(0px + 87 * ((100vw - 768px) / 512));
+  }
+  .help-list__item {
+    width: 170px;
+  }
 }
 
-.help-list__item:last-child {
-  padding-right: 84px;
+@media (max-width: 767px) {
+  .help-list {
+    -webkit-column-gap: calc(30px + 25 * ((100vw - 320px) / 448));
+            column-gap: calc(30px + 25 * ((100vw - 320px) / 448));
+    row-gap: calc(30px + 25 * ((100vw - 320px) / 448));
+    padding: 0;
+  }
+  .help-list__item {
+    width: 130px;
+  }
+  .help-list__item h4.help-icon__title {
+    font-size: calc(15px + 5 * ((100vw - 320px) / 448));
+  }
+}
+
+@media (max-width: 320px) {
+  .help-list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .help-icon {

@@ -1,13 +1,30 @@
 .help-container {
 	padding: 80px 40px 100px 40px;
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-left", 40, 69, $large, $medium);
+		@include adaptive-value("padding-right", 40, 69, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		@include adaptive-value("padding-top", 80, 42, $medium, $small);
+		@include adaptive-value("padding-bottom", 80, 42, $medium, $small);
+
+		@include adaptive-value("padding-left", 69, 15, $medium, $small);
+		@include adaptive-value("padding-right", 69, 15, $medium, $small);
+	}
 }
 
 .help {
 	@include flex(space-between, center, column);
-	min-height: 431px;
+	row-gap: 60px;
 
 	&__title {
 		text-align: center;
+	}
+
+	@media (max-width: #{$medium - 1 + px}) { 
+		@include adaptive-value("row-gap", 60, 42, $medium, $small);
 	}
 }
 
@@ -18,23 +35,41 @@
 	padding: 0 87px;
 
 	&__item {
-		@include flex(space-between, center, column);
-		row-gap: 30px;
+		@include flex(space-between, center, column);		
+		row-gap: 30px;		
 	}
 
-	&__item:nth-child(6) {
-		padding-left: 84px;
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("column-gap", 120, 60, $large, $medium);
+		@include adaptive-value("padding-left", 87, 0, $large, $medium);
+		@include adaptive-value("padding-right", 87, 0, $large, $medium);
+
+		&__item {
+			width: 170px;
+		}
 	}
 
-	&__item:last-child {
-		padding-right: 84px;
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("column-gap", 55, 30, $medium, $small);
+		@include adaptive-value("row-gap", 55, 30, $medium, $small);
+		padding: 0;
+
+		&__item {
+			width: 130px;
+
+			h4.help-icon__title {
+				@include adaptive-value("font-size", 20, 15, $medium, $small);
+			}			
+		}		
+	}
+
+	@media (max-width: #{$small + px}) {		
+		justify-content: flex-start;		
 	}
 }
 
 .help-icon {
 	width: 60px;
 	height: 60px;
-	fill: $help-icon-color;
-
-	&__title {}
+	fill: $help-icon-color;	
 }
