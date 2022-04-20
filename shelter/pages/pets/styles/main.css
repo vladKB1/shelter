@@ -98,11 +98,13 @@ select {
 
 h2.title {
   font-size: 44px;
+  letter-spacing: normal;
 }
 
 @media (max-width: 767px) {
   h2.title {
     font-size: calc(25px + 19 * ((100vw - 320px) / 448));
+    letter-spacing: 0.06em;
   }
 }
 
@@ -448,8 +450,7 @@ body {
 
 @media (max-width: 1279px) {
   .pets-container {
-    padding-top: calc(60px + 20 * ((100vw - 768px) / 512));
-    padding-bottom: calc(70px + 30 * ((100vw - 768px) / 512));
+    padding-bottom: calc(76px + 24 * ((100vw - 768px) / 512));
     padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
     padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
   }
@@ -457,7 +458,7 @@ body {
 
 @media (max-width: 767px) {
   .pets-container {
-    padding-top: calc(42px + 18 * ((100vw - 320px) / 448));
+    padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
     padding-bottom: calc(42px + 28 * ((100vw - 320px) / 448));
     padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
     padding-right: calc(10px + 20 * ((100vw - 320px) / 448));
@@ -494,7 +495,6 @@ body {
 @media (max-width: 767px) {
   .pets {
     row-gap: calc(42px + -12 * ((100vw - 320px) / 448));
-    padding: 0 15px;
   }
 }
 
@@ -533,6 +533,18 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+}
+
+@media (max-width: 1279px) {
+  .pets-slider__list .pets-card:nth-child(n+7) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets-slider__list .pets-card:nth-child(n+4) {
+    display: none;
+  }
 }
 
 .pets-card__link {
@@ -615,9 +627,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -670,6 +682,10 @@ body {
   }
 }
 
+.contacts {
+  max-width: 280px;
+}
+
 .contacts__email, .contacts__tel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,6 +713,13 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .contacts-title,
+  .location__title {
+    padding: 0 15px;
+  }
+}
+
 .email-icon {
   width: 40px;
   height: 32px;
@@ -710,8 +733,8 @@ body {
 }
 
 .location {
-  row-gap: unset;
-  min-height: 234px;
+  row-gap: 33px;
+  max-width: 302px;
 }
 
 .location__item {
@@ -735,6 +758,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  .location {
+    row-gap: calc(40px + -7 * ((100vw - 320px) / 448));
+  }
   .location__title {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;

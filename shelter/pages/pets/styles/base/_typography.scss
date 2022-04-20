@@ -32,9 +32,11 @@
 
 h2.title {
 	font-size: 44px; 
+	letter-spacing: normal;
 
 	@media (max-width: #{$medium - 1 + px}) {						
-		@include adaptive-value("font-size", 44, 25, $medium, $small);			
+		@include adaptive-value("font-size", 44, 25, $medium, $small);		
+		letter-spacing: 0.06em;	
 	}
 }
 

@@ -20,7 +20,7 @@
 }
 
 .footer-content {
-	@include flex(space-between, center);	
+	@include flex(space-between, flex-start);	
 	gap: 65px 160px;
 
 	a {
@@ -53,6 +53,8 @@
 }
 
 .contacts {
+	max-width: 280px;
+
 	&__email, &__tel {
 		@include flex(space-between);
 		column-gap: 20px;
@@ -61,6 +63,13 @@
 
 	@media (max-width: #{$medium - 1 + px}) {		
 		align-items: center;
+	}
+}
+
+.contacts-title,
+.location__title {
+	@media (max-width: #{$medium - 1 + px}) {
+		padding: 0 15px;
 	}
 }
 
@@ -77,8 +86,8 @@
 }
 
 .location {	
-	row-gap: unset;
-	min-height: 234px;
+	row-gap: 33px;
+	max-width: 302px;
 	
 	&__item {
 		@include flex(space-between);
@@ -88,6 +97,8 @@
 	}	
 
 	@media (max-width: #{$medium - 1 + px}) {	
+		@include adaptive-value("row-gap", 33, 40, $medium, $small);
+
 		&__title {	
 			align-self: center;
 		}

@@ -21,6 +21,7 @@
 
 	&__title {
 		text-align: center;
+		align-content: center;
 	}
 
 	@media (max-width: #{$medium - 1 + px}) { 
@@ -55,6 +56,7 @@
 		padding: 0;
 
 		&__item {
+			@include adaptive-value("row-gap", 30, 20, $medium, $small);		
 			width: 130px;
 
 			h4.help-icon__title {
@@ -70,7 +72,12 @@
 }
 
 .help-icon {
+	@include flex(center, center);
 	width: 60px;
-	height: 60px;
-	fill: $help-icon-color;	
+	height: 60px;			
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		@include adaptive-value("width", 60, 50, $medium, $small);
+		@include adaptive-value("height", 60, 50, $medium, $small);	
+	}
 }

@@ -104,6 +104,7 @@ h2.title {
 @media (max-width: 767px) {
   h2.title {
     font-size: calc(25px + 19 * ((100vw - 320px) / 448));
+    letter-spacing: 0.06em;
   }
 }
 
@@ -506,15 +507,15 @@ body {
 
 @media (max-width: 1279px) {
   .about-container {
-    padding-left: calc(165px + -125 * ((100vw - 1180px) / 100));
-    padding-right: calc(165px + -125 * ((100vw - 1180px) / 100));
+    padding-left: calc(169px + -129 * ((100vw - 1180px) / 100));
+    padding-right: calc(169px + -129 * ((100vw - 1180px) / 100));
   }
 }
 
 @media (max-width: 1179px) {
   .about-container {
-    padding-left: 165px;
-    padding-right: 165px;
+    padding-left: 169px;
+    padding-right: 169px;
   }
 }
 
@@ -522,8 +523,8 @@ body {
   .about-container {
     padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
     padding-bottom: calc(42px + 38 * ((100vw - 320px) / 448));
-    padding-left: calc(10px + 155 * ((100vw - 320px) / 448));
-    padding-right: calc(10px + 155 * ((100vw - 320px) / 448));
+    padding-left: calc(10px + 159 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 159 * ((100vw - 320px) / 448));
   }
 }
 
@@ -816,6 +817,8 @@ body {
 
 .help__title {
   text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media (max-width: 767px) {
@@ -881,6 +884,7 @@ body {
     padding: 0;
   }
   .help-list__item {
+    row-gap: calc(20px + 10 * ((100vw - 320px) / 448));
     width: 130px;
   }
   .help-list__item h4.help-icon__title {
@@ -898,9 +902,28 @@ body {
 }
 
 .help-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 60px;
   height: 60px;
-  fill: #F1CDB3;
+}
+
+@media (max-width: 767px) {
+  .help-icon {
+    width: calc(50px + 10 * ((100vw - 320px) / 448));
+    height: calc(50px + 10 * ((100vw - 320px) / 448));
+  }
 }
 
 .donation-section {
@@ -973,12 +996,12 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 60px;
-    padding: 0 10px;
   }
   .donation__img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    width: 100%;
   }
 }
 
@@ -996,6 +1019,7 @@ body {
     letter-spacing: 0.001em;
   }
   .donation__additional-info {
+    padding: 0 10px;
     text-align: justify;
   }
   .donation__img {
@@ -1042,7 +1066,7 @@ body {
   .donation-card h4.donation-card__number {
     font-size: calc(15px + 5 * ((100vw - 320px) / 448));
     line-height: 110%;
-    letter-spacing: 0.001em;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -1078,9 +1102,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1133,6 +1157,10 @@ body {
   }
 }
 
+.contacts {
+  max-width: 280px;
+}
+
 .contacts__email, .contacts__tel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1160,6 +1188,13 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .contacts-title,
+  .location__title {
+    padding: 0 15px;
+  }
+}
+
 .email-icon {
   width: 40px;
   height: 32px;
@@ -1173,8 +1208,8 @@ body {
 }
 
 .location {
-  row-gap: unset;
-  min-height: 234px;
+  row-gap: 33px;
+  max-width: 302px;
 }
 
 .location__item {
@@ -1198,6 +1233,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  .location {
+    row-gap: calc(40px + -7 * ((100vw - 320px) / 448));
+  }
   .location__title {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;

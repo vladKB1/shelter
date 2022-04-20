@@ -5,14 +5,13 @@
 	padding: 80px 40px 100px 40px;
 
 	@media (max-width: #{$large - 1 + px}) {
-		@include adaptive-value("padding-top", 80, 60, $large, $medium);
-		@include adaptive-value("padding-bottom", 100, 70, $large, $medium);	
+		@include adaptive-value("padding-bottom", 100, 76, $large, $medium);	
 		@include adaptive-value("padding-left", 40, 30, $large, $medium);
 		@include adaptive-value("padding-right", 40, 30, $large, $medium);
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {
-		@include adaptive-value("padding-top", 60, 42, $medium, $small);
+		@include adaptive-value("padding-top", 80, 42, $medium, $small);
 		@include adaptive-value("padding-bottom", 70, 42, $medium, $small);
 
 		@include adaptive-value("padding-left", 30, 10, $medium, $small);
@@ -29,12 +28,12 @@
 	}
 
 	@media (max-width: #{$large - 1 + px}) {		
-		@include adaptive-value("row-gap", 60, 30, $large, $medium);	
+		@include adaptive-value("row-gap", 60, 30, $large, $medium);
+
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {		
-		@include adaptive-value("row-gap", 30, 42, $medium, $small);	
-		padding: 0 15px;		
+		@include adaptive-value("row-gap", 30, 42, $medium, $small);			
 	}
 }
 
@@ -47,6 +46,22 @@
 		gap: 30px 40px;
 		flex-wrap: wrap;
 		width: 100%;
+	}
+
+	@media (max-width: #{$large - 1 + px}) {
+		&__list {		
+			.pets-card:nth-child(n+7) {
+				display: none;
+			}
+		}		
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		&__list {
+			.pets-card:nth-child(n+4) {
+				display: none;
+			}
+		}	
 	}
 }
 

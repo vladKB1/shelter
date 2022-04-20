@@ -4,21 +4,21 @@ $break-point: 1180;
 	padding: 80px 40px 100px 40px;
 
 	@media (max-width: #{$large - 1 + px}) {
-		@include adaptive-value("padding-left", 40, 165, $large, $break-point);
-		@include adaptive-value("padding-right", 40, 165, $large, $break-point);
+		@include adaptive-value("padding-left", 40, 169, $large, $break-point);
+		@include adaptive-value("padding-right", 40, 169, $large, $break-point);
 	}
 	
 	@media (max-width: #{$break-point - 1 + px}) {
-		padding-left: 165px;		
-		padding-right: 165px;
+		padding-left: 169px;		
+		padding-right: 169px;
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {
 		@include adaptive-value("padding-top", 80, 42, $medium, $small);
 		@include adaptive-value("padding-bottom", 80, 42, $medium, $small);
 
-		@include adaptive-value("padding-left", 165, 10, $medium, $small);
-		@include adaptive-value("padding-right", 165, 10, $medium, $small);
+		@include adaptive-value("padding-left", 169, 10, $medium, $small);
+		@include adaptive-value("padding-right", 169, 10, $medium, $small);
 	}
 }
 
