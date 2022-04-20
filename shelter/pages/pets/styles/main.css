@@ -559,6 +559,22 @@ body {
   padding: 40px 40px 0px;
 }
 
+@media (max-width: 1279px) {
+  .footer-container {
+    padding-top: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-container {
+    padding-top: 30px;
+    padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 20 * ((100vw - 320px) / 448));
+  }
+}
+
 .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -566,15 +582,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-column-gap: 160px;
-          column-gap: 160px;
+  gap: 65px 160px;
 }
 
 .footer-content a {
@@ -595,11 +610,31 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   row-gap: 40px;
   margin-top: 16px;
+}
+
+@media (max-width: 1279px) {
+  .footer-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 65px 60px;
+  }
+  .footer-content__item {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    row-gap: calc(40px + 25 * ((100vw - 320px) / 448));
+  }
+  .footer-content__img {
+    width: calc(260px + 40 * ((100vw - 320px) / 448));
+  }
 }
 
 .contacts__email, .contacts__tel {
@@ -619,6 +654,14 @@ body {
   -webkit-column-gap: 20px;
           column-gap: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .email-icon {
@@ -656,6 +699,14 @@ body {
           column-gap: 20px;
   cursor: pointer;
   text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .location__title {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .location-icon {
