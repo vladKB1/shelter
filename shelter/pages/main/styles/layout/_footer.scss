@@ -5,31 +5,62 @@
 
 .footer-container {
 	padding: 40px 40px 0px;
+
+	@media (max-width: #{$large - 1 + px}) {	
+		@include adaptive-value("padding-top", 40, 30, $large, $medium);
+		@include adaptive-value("padding-left", 40, 30, $large, $medium);
+		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		padding-top: 30px;
+		@include adaptive-value("padding-left", 30, 10, $medium, $small);
+		@include adaptive-value("padding-right", 30, 10, $medium, $small);
+	}
 }
 
 .footer-content {
-	@include flex(space-between, flex-start);
-	column-gap: 160px;	
+	@include flex(space-between, center);	
+	gap: 65px 160px;
 
 	a {
 		text-decoration: none;
 	}
 
 	&__item {
-		@include flex(space-between, flex-start, column);
-		flex-grow: 1;
+		@include flex(space-between, flex-start, column);		
 		row-gap: 40px;
 		margin-top: 16px;		
 	}
 
-	&__img {}	
+	@media (max-width: #{$large - 1 + px}) {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 65px 60px;
+
+		&__item {
+			margin: 0;					
+		}
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("row-gap", 65, 40, $medium, $small);
+		
+		&__img {
+			@include adaptive-value("width", 300, 260, $medium, $small);
+		}
+	}
 }
 
 .contacts {
 	&__email, &__tel {
 		@include flex(space-between);
 		column-gap: 20px;
-		cursor: pointer;
+		cursor: pointer;		
+	}		
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		align-items: center;
 	}
 }
 
@@ -55,6 +86,12 @@
 		cursor: pointer;
 		text-decoration: none;
 	}	
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		&__title {	
+			align-self: center;
+		}
+	}
 }
 
 .location-icon {
