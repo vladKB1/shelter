@@ -214,6 +214,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 52px;
+  height: 52px;
   padding: 24px;
   border: 2px solid #F1CDB3;
   border-radius: 50%;
@@ -259,7 +261,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-width: 340px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   text-align: center;
 }
 
@@ -272,6 +275,13 @@ body {
 .pagination__index:hover {
   background-color: #F1CDB3;
   border: none;
+}
+
+@media (max-width: 767px) {
+  .pagination {
+    -webkit-column-gap: calc(10px + 10 * ((100vw - 320px) / 448));
+            column-gap: calc(10px + 10 * ((100vw - 320px) / 448));
+  }
 }
 
 .header {
@@ -403,6 +413,24 @@ body {
   padding: 80px 40px 100px 40px;
 }
 
+@media (max-width: 1279px) {
+  .pets-container {
+    padding-top: calc(60px + 20 * ((100vw - 768px) / 512));
+    padding-bottom: calc(70px + 30 * ((100vw - 768px) / 512));
+    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .pets-container {
+    padding-top: calc(42px + 18 * ((100vw - 320px) / 448));
+    padding-bottom: calc(42px + 28 * ((100vw - 320px) / 448));
+    padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 20 * ((100vw - 320px) / 448));
+  }
+}
+
 .pets {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +450,19 @@ body {
 
 .pets__title {
   text-align: center;
+}
+
+@media (max-width: 1279px) {
+  .pets {
+    row-gap: calc(30px + 30 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .pets {
+    row-gap: calc(42px + -12 * ((100vw - 320px) / 448));
+    padding: 0 15px;
+  }
 }
 
 .pets-slider {
@@ -445,8 +486,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -494,6 +536,18 @@ body {
 .pets-card__link:hover > .pets-card__button {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
+}
+
+@media (max-width: 1279px) {
+  .pets-pagination {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets-pagination {
+    padding-top: 0;
+  }
 }
 
 .footer {

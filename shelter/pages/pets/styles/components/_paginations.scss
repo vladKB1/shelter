@@ -1,6 +1,6 @@
 .pagination {
 	@include flex(space-between);
-	min-width: 340px;
+	column-gap: 20px;
 	text-align: center;
 
 	&__first {}
@@ -21,5 +21,9 @@
 	&__right {}
 
 	&__last {}
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		@include adaptive-value("column-gap", 20, 10, $medium, $small);
+	}
 }
 

@@ -3,6 +3,21 @@
 }
 .pets-container {
 	padding: 80px 40px 100px 40px;
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-top", 80, 60, $large, $medium);
+		@include adaptive-value("padding-bottom", 100, 70, $large, $medium);	
+		@include adaptive-value("padding-left", 40, 30, $large, $medium);
+		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		@include adaptive-value("padding-top", 60, 42, $medium, $small);
+		@include adaptive-value("padding-bottom", 70, 42, $medium, $small);
+
+		@include adaptive-value("padding-left", 30, 10, $medium, $small);
+		@include adaptive-value("padding-right", 30, 10, $medium, $small);
+	}
 }
 
 .pets {
@@ -12,6 +27,15 @@
 	&__title {	
 		text-align: center;	
 	}
+
+	@media (max-width: #{$large - 1 + px}) {		
+		@include adaptive-value("row-gap", 60, 30, $large, $medium);	
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("row-gap", 30, 42, $medium, $small);	
+		padding: 0 15px;		
+	}
 }
 
 .pets-slider {
@@ -19,7 +43,7 @@
 	width: 100%;	
 
 	&__list {
-		@include flex(space-around, center);
+		@include flex(center, center);
 		gap: 30px 40px;
 		flex-wrap: wrap;
 		width: 100%;
@@ -49,4 +73,14 @@
 			}
 		}
 	}	
+}
+
+.pets-pagination {
+	@media (max-width: #{$large - 1 + px}) {
+		padding-top: 10px;
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		padding-top: 0;
+	}
 }
