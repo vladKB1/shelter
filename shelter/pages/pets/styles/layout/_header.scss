@@ -8,6 +8,17 @@
 
 .header-container {
 	padding: 30px 40px;
+
+	@media (max-width: #{$large - 1 + px}) {		
+		@include adaptive-value("padding-left", 40, 30, $large, $medium);
+		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		padding-top: 30px;
+		@include adaptive-value("padding-left", 30, 10, $medium, $small);		
+		@include adaptive-value("padding-right", 30, 50, $medium, $small);
+	}
 }
 
 .logo {	
@@ -60,5 +71,9 @@
 				color: $dark-subtitle-active-color;			
 			}
 		}	
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		display: none;
 	}
 }

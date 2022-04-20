@@ -84,6 +84,13 @@ select {
   color: #545454;
 }
 
+@media (max-width: 767px) {
+  .title {
+    text-align: center;
+    font-size: calc(25px + 10 * ((100vw - 320px) / 448));
+  }
+}
+
 .button-title {
   font-size: 17px;
   text-decoration: none;
@@ -91,6 +98,12 @@ select {
 
 h2.title {
   font-size: 44px;
+}
+
+@media (max-width: 767px) {
+  h2.title {
+    font-size: calc(25px + 19 * ((100vw - 320px) / 448));
+  }
 }
 
 h4.title {
@@ -144,6 +157,21 @@ body {
   padding: 60px 40px;
 }
 
+@media (max-width: 1279px) {
+  .container {
+    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-top: 30px;
+    padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 20 * ((100vw - 320px) / 448));
+  }
+}
+
 .button {
   padding: 15px 45px;
   border: none;
@@ -186,8 +214,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 52px;
-  height: 52px;
+  padding: 24px;
   border: 2px solid #F1CDB3;
   border-radius: 50%;
   color: #292929;
@@ -271,6 +298,21 @@ body {
   padding: 30px 40px;
 }
 
+@media (max-width: 1279px) {
+  .header-container {
+    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .header-container {
+    padding-top: 30px;
+    padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
+    padding-right: calc(50px + -20 * ((100vw - 320px) / 448));
+  }
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,6 +387,12 @@ body {
 
 .nav-list__item_active .nav-list__link {
   color: #292929;
+}
+
+@media (max-width: 767px) {
+  .nav-list {
+    display: none;
+  }
 }
 
 .pets-section {

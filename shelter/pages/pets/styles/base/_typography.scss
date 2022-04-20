@@ -18,6 +18,11 @@
 	letter-spacing: 0.06em;
 
 	color: $title-color;
+
+	@media (max-width: #{$medium - 1 + px}) {
+		text-align: center;						
+		@include adaptive-value("font-size", 35, 25, $medium, $small);			
+	}
 }
 
 .button-title {
@@ -27,6 +32,10 @@
 
 h2.title {
 	font-size: 44px; 
+
+	@media (max-width: #{$medium - 1 + px}) {						
+		@include adaptive-value("font-size", 44, 25, $medium, $small);			
+	}
 }
 
 h4.title {		
