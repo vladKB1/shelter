@@ -852,6 +852,7 @@ body {
   }
   .help-list__item h4.help-icon__title {
     font-size: calc(15px + 5 * ((100vw - 320px) / 448));
+    line-height: 110%;
   }
 }
 
@@ -875,6 +876,22 @@ body {
 
 .donation-container {
   padding: 80px 183px 100px;
+}
+
+@media (max-width: 1279px) {
+  .donation-container {
+    padding-left: calc(131.5px + 256 * ((100vw - 768px) / 512));
+    padding-right: calc(131.5px + 256 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .donation-container {
+    padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-bottom: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-left: calc(10px + 121.5 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 121.5 * ((100vw - 320px) / 448));
+  }
 }
 
 .donation {
@@ -912,6 +929,47 @@ body {
   row-gap: 20px;
 }
 
+.donation__additional-info {
+  max-width: 380px;
+}
+
+@media (max-width: 1279px) {
+  .donation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 60px;
+    padding: 0 10px;
+  }
+  .donation__img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .donation {
+    row-gap: calc(42px + 18 * ((100vw - 320px) / 448));
+  }
+  .donation__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .donation h5.donation__info {
+    line-height: 160%;
+    letter-spacing: 0.001em;
+  }
+  .donation__additional-info {
+    text-align: justify;
+  }
+  .donation__img {
+    width: calc(260px + 245 * ((100vw - 320px) / 448));
+  }
+}
+
 .donation-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -945,6 +1003,14 @@ body {
   padding-right: 15px;
   background-image: url("../../../assets/icons/credit-card.svg");
   background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .donation-card h4.donation-card__number {
+    font-size: calc(15px + 5 * ((100vw - 320px) / 448));
+    line-height: 110%;
+    letter-spacing: 0.001em;
+  }
 }
 
 .footer {

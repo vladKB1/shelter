@@ -59,6 +59,7 @@
 
 			h4.help-icon__title {
 				@include adaptive-value("font-size", 20, 15, $medium, $small);
+				line-height: 110%;
 			}			
 		}		
 	}
