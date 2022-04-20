@@ -287,6 +287,11 @@ body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: #ffffff;
 }
 
@@ -445,7 +450,7 @@ body {
 }
 
 .pets-container {
-  padding: 80px 40px 100px 40px;
+  padding: 200px 40px 100px 40px;
 }
 
 @media (max-width: 1279px) {
@@ -458,7 +463,7 @@ body {
 
 @media (max-width: 767px) {
   .pets-container {
-    padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
+    padding-top: calc(162px + 38 * ((100vw - 320px) / 448));
     padding-bottom: calc(42px + 28 * ((100vw - 320px) / 448));
     padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
     padding-right: calc(10px + 20 * ((100vw - 320px) / 448));

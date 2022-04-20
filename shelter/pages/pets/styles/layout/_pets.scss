@@ -2,7 +2,7 @@
 	background-color: $pets-section-bg;
 }
 .pets-container {
-	padding: 80px 40px 100px 40px;
+	padding: 200px 40px 100px 40px;
 
 	@media (max-width: #{$large - 1 + px}) {
 		@include adaptive-value("padding-bottom", 100, 76, $large, $medium);	
@@ -11,7 +11,7 @@
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {
-		@include adaptive-value("padding-top", 80, 42, $medium, $small);
+		@include adaptive-value("padding-top", 200, 162, $medium, $small);
 		@include adaptive-value("padding-bottom", 70, 42, $medium, $small);
 
 		@include adaptive-value("padding-left", 30, 10, $medium, $small);
