@@ -70,7 +70,7 @@
 		}
 
 		.blackout {
-			position: absolute;
+			position: fixed;
 			z-index: 1;
 			top: 0;
 			bottom: 0;
@@ -162,6 +162,7 @@
 	&__link {					
 		color: $light-subtitle-color;		
 		text-decoration: none;
+		cursor: pointer;
 
 		&:hover {
 			color: $light-subtitle-hover-color;
@@ -169,8 +170,7 @@
 	}
 
 	&__item {
-		position: relative;	
-		cursor: pointer;
+		position: relative;			
 
 		&_active {
 			border-bottom: 3px solid $active-color;

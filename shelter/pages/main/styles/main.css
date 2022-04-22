@@ -151,6 +151,16 @@ body {
   padding: 0;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.body_lock {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -317,7 +327,7 @@ body {
     visibility: visible;
   }
   .header .blackout {
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 0;
     bottom: 0;
@@ -427,6 +437,7 @@ body {
 .nav-list__link {
   color: #CDCDCD;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-list__link:hover {
@@ -435,7 +446,6 @@ body {
 
 .nav-list__item {
   position: relative;
-  cursor: pointer;
 }
 
 .nav-list__item_active {

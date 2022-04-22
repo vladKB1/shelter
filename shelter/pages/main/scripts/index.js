@@ -1,8 +1,13 @@
-import { toggleBurger } from './toggleBurger.js';
+import toggleBurger from './toggleBurger.js';
 
 const body = document.querySelector('body');
-const burger = document.querySelector('.header__burger');
+const header = document.querySelector('.header');
 
-burger.addEventListener('click', () => {
-	toggleBurger();
+header.addEventListener('click', (e) => {
+	const target = e.target;
+	if (target.classList.contains('blackout') ||
+		target.classList.contains('header__burger') ||
+		target.classList.contains('nav-list__link')) {
+		toggleBurger(target);
+	}
 });
