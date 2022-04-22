@@ -1,18 +1,18 @@
 html {
-	scroll-behavior: smooth;	
+	scroll-behavior: smooth;		
 }
 
 body {
-	min-height: 100vh;    
-	line-height: 1.5;
+	min-height: 100vh;  	
 	padding: 0;
-	text-rendering: optimizeSpeed;  		
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;  	
 }
 
 .container {
 	max-width: 1280px;
 	margin: 0 auto;	
-	padding: 60px 40px;
+	padding: 60px 40px;	
 
 	@media (max-width: #{$large - 1 + px}) {
 		@include adaptive-value("padding-top", 60, 30, $large, $medium);
