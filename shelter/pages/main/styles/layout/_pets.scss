@@ -32,12 +32,19 @@
 }
 
 .pets-slider {
-	@include flex(center, center);
-	width: 100%;
+	@include flex();
+	column-gap: 53px;
+	width: 100%;	
+
+	&-container {
+		overflow: hidden;
+	}
 
 	&__list {
-		@include flex(space-around, center);
-		width: 100%;				
+		@include flex();
+		column-gap: 90px;		
+		position: relative;
+				
 	}
 
 	$slider-breakpoint: 1080;
@@ -80,7 +87,9 @@
 
 .pets-card {
 	@include flex(space-between, center, column);
+	flex-shrink: 0;
 	row-gap: 30px;
+	width: 270px;
 	min-height: 435px;
 	padding-bottom: 30px;
 	
