@@ -65,12 +65,12 @@ select {
 
 @font-face {
   font-family: Arial;
-  src: url("../../../../assets/fonts/arial.ttf");
+  src: url("../../../assets/fonts/arial.ttf");
 }
 
 @font-face {
   font-family: Georgia;
-  src: url("../../../../assets//fonts//georgia.ttf");
+  src: url("../../../assets/fonts/georgia.ttf");
 }
 
 .title {
@@ -204,6 +204,7 @@ body {
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   color: #292929;
+  background-color: transparent;
   cursor: pointer;
   text-decoration: none;
 }
@@ -828,7 +829,7 @@ body {
   }
 }
 
-.pets-card__link {
+.pets-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -853,13 +854,13 @@ body {
   text-decoration: none;
 }
 
-.pets-card__link:hover {
+.pets-card:hover {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
           box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
-.pets-card__link:hover > .pets-card__button {
+.pets-card:hover > .pets-card__button {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
 }

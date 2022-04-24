@@ -65,12 +65,12 @@ select {
 
 @font-face {
   font-family: Arial;
-  src: url("../../../../assets/fonts/arial.ttf");
+  src: url("../../../assets/fonts/arial.ttf");
 }
 
 @font-face {
   font-family: Georgia;
-  src: url("../../../../assets//fonts//georgia.ttf");
+  src: url("../../../assets/fonts/georgia.ttf");
 }
 
 .title {
@@ -203,6 +203,7 @@ body {
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   color: #292929;
+  background-color: transparent;
   cursor: pointer;
   text-decoration: none;
 }
