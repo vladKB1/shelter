@@ -258,9 +258,9 @@ body {
 .header {
   position: absolute;
   z-index: 1;
+  top: 0;
   left: 0;
   right: 0;
-  top: 0;
   width: 100%;
 }
 
@@ -353,9 +353,21 @@ body {
     top: 0;
     bottom: 0;
     right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 320px;
     height: 100vh;
-    padding-top: 248px;
     background-color: #292929;
     -webkit-transform: translate(320px);
             transform: translate(320px);
@@ -374,6 +386,7 @@ body {
   .header__content .main-nav_open {
     -webkit-transform: translate(0);
             transform: translate(0);
+    overflow-y: auto;
   }
 }
 

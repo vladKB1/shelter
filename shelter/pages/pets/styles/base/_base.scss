@@ -4,9 +4,18 @@ html {
 
 body {
 	min-height: 100vh;    
-	line-height: 1.5;
 	padding: 0;
+	line-height: 1.5;
 	text-rendering: optimizeSpeed;  		
+	transition: none;
+}
+
+.body_lock {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	overflow: hidden;	
 }
 
 .container {
