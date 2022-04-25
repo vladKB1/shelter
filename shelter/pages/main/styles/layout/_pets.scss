@@ -31,8 +31,18 @@
 	}
 }
 
+@keyframes move-right {
+	from {left: 0;}
+	to {left: -1080px;}
+}
+
+@keyframes move-left {
+	from {left: -1080px;}
+	to {left: 0;}
+}
+
 .pets-slider {
-	@include flex();
+	@include flex(center);
 	column-gap: 53px;
 	width: 100%;	
 
@@ -41,10 +51,21 @@
 	}
 
 	&__list {
+		position: relative;		
 		@include flex();
-		column-gap: 90px;		
-		position: relative;
-				
+		column-gap: 90px;			
+		
+		&_right {
+			left: -1080px;
+			animation-name: move-right;
+			animation-duration: 0.2s;
+		}
+
+		&_left {
+			left: 0px;
+			animation-name: move-left;
+			animation-duration: 0.2s;
+		}
 	}
 
 	$slider-breakpoint: 1080;

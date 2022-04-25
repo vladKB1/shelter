@@ -1,12 +1,14 @@
 import toggleBurger from './toggleBurger.js';
-import petsData from './pets.js';
 import getNewPetsID from './getNewPetsID.js';
 import renderSlide from './renderSlide.js';
 
-const body = document.querySelector('body');
-const header = document.querySelector('.header');
+export const timeout = 200;
 
-header.addEventListener('click', (e) => {
+const body = document.querySelector('body');
+
+//burger menu
+const header = document.querySelector('.header');
+header.addEventListener('click', e => {
 	const target = e.target;
 	if (target.classList.contains('blackout') ||
 		target.classList.contains('header__burger') ||
@@ -16,11 +18,25 @@ header.addEventListener('click', (e) => {
 	}
 });
 
-
-
-const pets = JSON.parse(petsData);
+//pets slider
 let size = document.innerWidth < 1280 ? 2 : 3;
 size = document.innerWidth < 768 ? 1 : size;
 
-const petsID = getNewPetsID(size, []);
-renderSlide(petsID, pets);
+let petsID = getNewPetsID(size, []);
+renderSlide(petsID);
+
+const petsSlider = document.querySelector('.pets-slider');
+petsSlider.addEventListener('click', e => {
+	size = document.innerWidth < 1280 ? 2 : 3;
+	size = document.innerWidth < 768 ? 1 : size;
+
+	if (e.target.classList.contains('round-button')) {
+		if (e.target.classList.contains('left-arrow')) {
+			petsID = getNewPetsID(size, petsID);
+			renderSlide(petsID, true);
+		} else if (e.target.classList.contains('right-arrow')) {
+			petsID = getNewPetsID(size, petsID);
+			renderSlide(petsID);
+		}
+	}
+});

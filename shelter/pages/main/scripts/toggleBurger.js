@@ -1,11 +1,11 @@
 import toggleScroll from './toggleScroll.js';
+import { timeout } from './index.js';
+
 const body = document.body;
 const headerContainer = document.querySelector('.header-container');
 const headerContent = document.querySelector('.header__content');
 const mainNav = document.querySelector('.main-nav');
 const headerBurger = document.querySelector('.header__burger');
-
-let timeout = 200;
 
 export default function toggleBurger(target) {
 	toggleScroll(target, timeout);
