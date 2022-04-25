@@ -709,8 +709,8 @@ body {
 
 @media (max-width: 1279px) {
   .pets-container {
-    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
-    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-left: calc(30px + 256 * ((100vw - 768px) / 512));
+    padding-right: calc(30px + 256 * ((100vw - 768px) / 512));
   }
 }
 
@@ -718,8 +718,8 @@ body {
   .pets-container {
     padding-top: calc(42px + 38 * ((100vw - 320px) / 448));
     padding-bottom: calc(42px + 38 * ((100vw - 320px) / 448));
-    padding-left: calc(10px + 174 * ((100vw - 320px) / 448));
-    padding-right: calc(10px + 174 * ((100vw - 320px) / 448));
+    padding-left: calc(10px + 224 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 224 * ((100vw - 320px) / 448));
   }
 }
 
@@ -748,6 +748,9 @@ body {
   .pets {
     row-gap: calc(42px + 18 * ((100vw - 320px) / 448));
   }
+  .pets__title {
+    font-size: 25px;
+  }
 }
 
 @-webkit-keyframes move-right {
@@ -768,6 +771,42 @@ body {
   }
 }
 
+@-webkit-keyframes move-right-medium {
+  from {
+    left: 0;
+  }
+  to {
+    left: -620px;
+  }
+}
+
+@keyframes move-right-medium {
+  from {
+    left: 0;
+  }
+  to {
+    left: -620px;
+  }
+}
+
+@-webkit-keyframes move-right-small {
+  from {
+    left: 0;
+  }
+  to {
+    left: -310px;
+  }
+}
+
+@keyframes move-right-small {
+  from {
+    left: 0;
+  }
+  to {
+    left: -310px;
+  }
+}
+
 @-webkit-keyframes move-left {
   from {
     left: -1080px;
@@ -780,6 +819,42 @@ body {
 @keyframes move-left {
   from {
     left: -1080px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes move-left-medium {
+  from {
+    left: -620px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes move-left-medium {
+  from {
+    left: -620px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes move-left-small {
+  from {
+    left: -310px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes move-left-small {
+  from {
+    left: -310px;
   }
   to {
     left: 0;
@@ -844,9 +919,23 @@ body {
           animation-duration: 0.2s;
 }
 
-@media (max-width: 1080px) {
-  .pets-slider__list .pets-card:nth-of-type(3) {
-    display: none;
+@media (max-width: 1279px) {
+  .pets-slider {
+    -webkit-column-gap: 12px;
+            column-gap: 12px;
+  }
+  .pets-slider__list {
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+  .pets-slider__list_right {
+    left: -620px;
+    -webkit-animation-name: move-right-medium;
+            animation-name: move-right-medium;
+  }
+  .pets-slider__list_left {
+    -webkit-animation-name: move-left-medium;
+            animation-name: move-left-medium;
   }
 }
 
@@ -856,13 +945,22 @@ body {
         flex-wrap: wrap;
     gap: 20px 80px;
   }
+  .pets-slider-container {
+    margin: 0 15px;
+  }
   .pets-slider__list {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  .pets-slider__list .pets-card:nth-of-type(2) {
-    display: none;
+  .pets-slider__list_right {
+    left: -310px;
+    -webkit-animation-name: move-right-small;
+            animation-name: move-right-small;
+  }
+  .pets-slider__list_left {
+    -webkit-animation-name: move-left-small;
+            animation-name: move-left-small;
   }
 }
 

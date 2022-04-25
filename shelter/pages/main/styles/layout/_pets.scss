@@ -5,16 +5,16 @@
 	padding: 80px 40px 100px 40px;
 
 	@media (max-width: #{$large - 1 + px}) {	
-		@include adaptive-value("padding-left", 40, 30, $large, $medium);
-		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+		@include adaptive-value("padding-left", 286, 30, $large, $medium);
+		@include adaptive-value("padding-right", 286, 30, $large, $medium);
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {
 		@include adaptive-value("padding-top", 80, 42, $medium, $small);
 		@include adaptive-value("padding-bottom", 80, 42, $medium, $small);
 
-		@include adaptive-value("padding-left", 184, 10, $medium, $small);
-		@include adaptive-value("padding-right", 184, 10, $medium, $small);
+		@include adaptive-value("padding-left", 234, 10, $medium, $small);
+		@include adaptive-value("padding-right", 234, 10, $medium, $small);
 	}
 }
 
@@ -23,21 +23,47 @@
 	row-gap: 60px;
 
 	&__title {	
-		text-align: center;			
+		text-align: center;				
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {		
 		@include adaptive-value("row-gap", 60, 42, $medium, $small);	
+		
+		&__title {
+			font-size: 25px;	
+		}
 	}
 }
+
+$move: -1080;
 
 @keyframes move-right {
 	from {left: 0;}
 	to {left: -1080px;}
 }
 
+@keyframes move-right-medium {
+	from {left: 0;}
+	to {left: -620px;}
+}
+
+@keyframes move-right-small {
+	from {left: 0;}
+	to {left: -310px;}
+}
+
 @keyframes move-left {
 	from {left: -1080px;}
+	to {left: 0;}
+}
+
+@keyframes move-left-medium {
+	from {left: -620px;}
+	to {left: 0;}
+}
+
+@keyframes move-left-small {
+	from {left: -310px;}
 	to {left: 0;}
 }
 
@@ -67,12 +93,20 @@
 			animation-duration: 0.2s;
 		}
 	}
+	
+	@media (max-width: #{$large - 1 + px}) {
+		column-gap: 12px;
 
-	$slider-breakpoint: 1080;
-	@media (max-width: #{$slider-breakpoint + px}) {
 		&__list {
-			.pets-card:nth-of-type(3) {
-				display: none;
+			column-gap: 40px;
+
+			&_right {	
+				left: -620px;	
+				animation-name: move-right-medium;		
+			}
+
+			&_left {
+				animation-name: move-left-medium;
 			}
 		}
 	}
@@ -80,12 +114,21 @@
 	@media (max-width: #{$medium - 1 + px}) {
 		flex-wrap: wrap;	
 		gap: 20px 80px;
+
+		&-container {
+			margin: 0 15px;
+		}
 		
 		&__list {
 			order: 1;
+			
+			&_right {	
+				left: -310px;			
+				animation-name: move-right-small;		
+			}
 
-			.pets-card:nth-of-type(2) {
-				display: none;
+			&_left {
+				animation-name: move-left-small;
 			}
 		}		
 	}

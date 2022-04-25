@@ -19,17 +19,18 @@ header.addEventListener('click', e => {
 });
 
 //pets slider
-let size = document.innerWidth < 1280 ? 2 : 3;
-size = document.innerWidth < 768 ? 1 : size;
+let size = window.innerWidth < 1280 ? 2 : 3;
+size = window.innerWidth < 768 ? 1 : size;
 
 let petsID = getNewPetsID(size, []);
 renderSlide(petsID);
 
 const petsSlider = document.querySelector('.pets-slider');
 petsSlider.addEventListener('click', e => {
-	size = document.innerWidth < 1280 ? 2 : 3;
-	size = document.innerWidth < 768 ? 1 : size;
+	size = window.innerWidth < 1280 ? 2 : 3;
+	size = window.innerWidth < 768 ? 1 : size;
 
+	console.log(size, document.innerWidth);
 	if (e.target.classList.contains('round-button')) {
 		if (e.target.classList.contains('left-arrow')) {
 			petsID = getNewPetsID(size, petsID);
