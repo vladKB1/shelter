@@ -1,31 +1,33 @@
-const html = document.querySelector('html');
+export let unlock = true;
+
 const body = document.body;
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.container').offsetWidth + 'px';
+	const lockMarginValue = window.innerWidth - document.body.offsetWidth + 'px';
 	const lockPadding = document.querySelectorAll('.lock-padding');
 	const pagePosition = window.scrollY;
 	body.dataset.position = pagePosition;
 
-	for (let i = 0; i < lockPadding.length; i++) {
-		lockPadding[i].style.paddingRight = lockPaddingValue;
-	}
-	body.style.paddingRight = lockPaddingValue;
+	lockPadding.forEach(element => {
+		element.style.paddingRight = lockMarginValue;
+	});
+	body.style.marginRight = lockMarginValue;
 	body.classList.add('body_lock');
-
 
 	body.style.top = -pagePosition + 'px';
 }
 
 function bodyUnlock(target) {
+	document.documentElement.style.scrollBehavior = 'auto';
+
 	const lockPadding = document.querySelectorAll('.lock-padding');
 	const pagePosition = parseInt(body.dataset.position);
 	body.style.top = 'auto';
 
-	for (let i = 0; i < lockPadding.length; i++) {
-		lockPadding[i].style.paddingRight = '0px';
-	}
-	body.style.paddingRight = '0px';
+	lockPadding.forEach(element => {
+		element.style.paddingRight = '0px';
+	});
+	body.style.marginRight = '0px';
 	body.classList.remove('body_lock');
 
 	if (!target.classList.contains('nav-list__link')) {
@@ -33,12 +35,10 @@ function bodyUnlock(target) {
 	}
 	body.removeAttribute('data-position');
 
-	html.style.scrollBehavior = 'smooth';
+	document.documentElement.style.scrollBehavior = 'smooth';
 }
 
 export default function toggleScroll(target, timeout) {
-	html.style.scrollBehavior = 'auto';
-
 	if (body.classList.contains('body_lock')) {
 		if (!target.classList.contains('nav-list__link')) {
 			setTimeout(() => bodyUnlock(target), timeout);
@@ -48,4 +48,7 @@ export default function toggleScroll(target, timeout) {
 	} else {
 		bodyLock(target);
 	}
+
+	unlock = false;
+	setTimeout(() => unlock = true, timeout);
 }

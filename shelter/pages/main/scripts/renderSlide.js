@@ -1,9 +1,8 @@
 import createPetCard from './createPetCard.js';
-import petsData from './pets.js';
-import { timeout } from './index.js'
+import { pets, timeout } from './index.js'
 
 const petsSlider = document.querySelector('.pets-slider__list');
-const pets = JSON.parse(petsData);
+
 let petsCards = [];
 let init = false;
 

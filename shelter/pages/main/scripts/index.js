@@ -1,8 +1,12 @@
+import petsData from './pets.js';
 import toggleBurger from './toggleBurger.js';
 import getNewPetsID from './getNewPetsID.js';
 import renderSlide from './renderSlide.js';
+import { preloadPetsImages } from './services.js';
+import { closePopup, openPopup, renderPetsPopup } from './popup.js';
 
 export const timeout = 200;
+export const pets = JSON.parse(petsData);
 
 const body = document.querySelector('body');
 
@@ -19,6 +23,8 @@ header.addEventListener('click', e => {
 });
 
 //pets slider
+preloadPetsImages();
+
 let size = window.innerWidth < 1280 ? 2 : 3;
 size = window.innerWidth < 768 ? 1 : size;
 
@@ -30,7 +36,6 @@ petsSlider.addEventListener('click', e => {
 	size = window.innerWidth < 1280 ? 2 : 3;
 	size = window.innerWidth < 768 ? 1 : size;
 
-	console.log(size, document.innerWidth);
 	if (e.target.classList.contains('round-button')) {
 		if (e.target.classList.contains('left-arrow')) {
 			petsID = getNewPetsID(size, petsID);
@@ -41,3 +46,20 @@ petsSlider.addEventListener('click', e => {
 		}
 	}
 });
+
+//popup
+const petsPopup = document.querySelector('.popup_pets');
+petsSlider.addEventListener('click', e => {
+	if (e.target.closest('.pets-card')) {
+		const id = e.target.closest('.pets-card').dataset.id;
+		renderPetsPopup(petsPopup, id);
+		openPopup(petsPopup, e.target);
+	}
+})
+
+const popupCloseElements = document.querySelectorAll('.popup__close');
+popupCloseElements.forEach(closeElement => {
+	closeElement.addEventListener('click', e => {
+		closePopup(closeElement.closest('.popup'), closeElement);
+	})
+})

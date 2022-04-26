@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
     </head>
     <body>
-        <header class="header">
+        <header class="header lock-padding">
             <div class="container header-container">
                 <div class="header__content">
                     <a class="logo" href="#">
@@ -40,7 +40,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="start-screen-section">
+            <section class="start-screen-section lock-padding">
                 <div class="container start-screen-container">
                     <div class="start-screen">
                         <div class="start-screen__content">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </section>
-            <section class="about-section">
+            <section class="about-section lock-padding">
                 <div class="container about-container">
                     <div class="about">
                         <img class="about__img" src="../../assets/images/about-pets.png" alt="about-pets" />
@@ -93,7 +93,7 @@
                     </div>
                 </div>
             </section>
-            <section class="pets-section" id="pets">
+            <section class="pets-section lock-padding" id="pets">
                 <div class="container pets-container">
                     <div class="pets">
                         <h3 class="title pets__title">Our friends who<br />are looking for a house</h3>
@@ -108,7 +108,7 @@
                     </div>
                 </div>
             </section>
-            <section class="help-section" id="help">
+            <section class="help-section lock-padding" id="help">
                 <div class="container help-container">
                     <div class="help">
                         <h3 class="title help__title">How you can help<br />our shelter</h3>
@@ -173,7 +173,7 @@
                     </div>
                 </div>
             </section>
-            <section class="donation-section">
+            <section class="donation-section lock-padding">
                 <div class="container donation-container">
                     <div class="donation">
                         <img class="donation__img" src="../../assets/images/donation-dog.png" alt="dog" />
@@ -196,7 +196,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer" id="footer">
+        <footer class="footer lock-padding" id="footer">
             <div class="container footer-container">
                 <div class="footer-content">
                     <div class="footer-content__item contacts">
@@ -227,6 +227,15 @@
                 </div>
             </div>
         </footer>
+
+        <div class="popup popup_pets">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <button class="popup__close round-button"></button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./scripts/index.js"></script>
     </body>
-    <script type="module" src="./scripts/index.js"></script>
 </html>

@@ -163,6 +163,11 @@ body {
   overflow: hidden;
 }
 
+.lock-padding {
+  -webkit-transition: padding 0s;
+  transition: padding 0s;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -231,6 +236,7 @@ body {
   padding: 24px;
   border: 2px solid #F1CDB3;
   border-radius: 50%;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -245,6 +251,102 @@ body {
 .round-button:active {
   border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
+}
+
+.popup {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
+  -webkit-transition: all 0.2s ease-in, height 0s;
+  transition: all 0.2s ease-in, height 0s;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.popup__content {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  border-radius: 9px;
+  background-color: #FAFAFA;
+  -webkit-box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+          box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+@media (max-width: 1279px) {
+  .popup__content {
+    width: calc(630px + 270 * ((100vw - 768px) / 512));
+    height: calc(350px + 150 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .popup__content {
+    width: 240px;
+    height: 341px;
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: -52px;
+  right: -52px;
+  background-image: url("../../../assets/icons/close.svg");
+}
+
+@media (max-width: 767px) {
+  .popup__close {
+    right: calc(-31px + -21 * ((100vw - 320px) / 448));
+  }
+}
+
+.popup__text {
+  padding: 50px 20px 88px 30px;
+}
+
+@media (max-width: 1279px) {
+  .popup__text {
+    padding-top: calc(10px + 40 * ((100vw - 768px) / 512));
+    padding-bottom: calc(37px + 51 * ((100vw - 768px) / 512));
+    padding-left: calc(10px + 10 * ((100vw - 768px) / 512));
+    padding-right: calc(10px + 20 * ((100vw - 768px) / 512));
+  }
+}
+
+@media (max-width: 767px) {
+  .popup__text {
+    padding: 10px;
+  }
+}
+
+.popup_open {
+  z-index: 100;
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 767px) {
