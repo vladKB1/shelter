@@ -28,8 +28,8 @@ preloadPetsImages();
 let size = window.innerWidth < 1280 ? 6 : 8;
 size = window.innerWidth < 768 ? 3 : size;
 
-// let petsID = getNewPetsID(size, []);
-// renderSlide(petsID);
+let petsID = getNewPetsID(size);
+//renderSlide(petsID);
 
 const petsSlider = document.querySelector('.pets-slider');
 // petsSlider.addEventListener('click', e => {
