@@ -14,8 +14,9 @@
 
 	&__content {
 		position: relative;
+		@include flex(flex-start, center);
 		width: 900px;
-		height: 500px;
+		
 
 		border-radius: 9px;
 
@@ -25,14 +26,12 @@
 		
 
 		@media (max-width: #{$large - 1 + px}) {
-			@include adaptive-value("width", 900, 630, $large, $medium);
-			@include adaptive-value("height", 500, 350, $large, $medium);
+			@include adaptive-value("width", 900, 630, $large, $medium);			
 		}
 
 		@media (max-width: #{$medium - 1 + px}) {
 			width: 240px;
-			height: 341px;
-
+			min-height: 341px;
 		}
 	}
 
@@ -48,21 +47,91 @@
 	}
 
 	&__img {
-
-	}
-
-	&__text {
-		padding: 50px 20px 88px 30px;
-
-		@media (max-width: #{$large - 1 + px}) {
-			@include adaptive-value("padding-top", 50, 10, $large, $medium);
-			@include adaptive-value("padding-bottom", 88, 37, $large, $medium);			
-			@include adaptive-value("padding-left", 20, 10, $large, $medium);
-			@include adaptive-value("padding-right", 30, 10, $large, $medium);
+		width: 500px;
+		height: 500px;
+		border-radius: 9px;
+		
+		@media (max-width: #{$large - 1 + px}) {			
+			@include adaptive-value("width", 500, 350, $large, $medium);
+			@include adaptive-value("height", 500, 350, $large, $medium);
 		}
 
 		@media (max-width: #{$medium - 1 + px}) {
+			display: none;
+		}
+	}
+
+	&__title {
+		color: $popup-title-color;
+
+		@media (max-width: #{$medium - 1 + px}) {
+			font-size: 35px;
+		}
+	}
+
+	&__text {
+		@include flex(flex-start, flex-start, column);
+		align-self: flex-start;
+		row-gap: 10px;
+		padding: 50px 20px 10px 30px;		
+		
+		.pet-breed,
+		.pet-description,
+		.pet-list-data__item {
+			color: $popup-title-color;
+		}
+
+		.pet-description {			
+			padding: 30px 0;					
+		}
+
+		.pet-list-data-container {
+			padding-left: 14px;
+			list-style: disc;			
+			
+			.pet-list-data {
+				color: $button-bg;
+			}			
+
+			.pet-list-data__item {				
+				display: block;
+				padding-bottom: 10px;								
+			}
+		}
+
+		@media (max-width: #{$large - 1 + px}) {
+			@include adaptive-value("padding-top", 50, 10, $large, $medium);						
+			@include adaptive-value("padding-left", 20, 10, $large, $medium);
+			@include adaptive-value("padding-right", 30, 10, $large, $medium);
+
+			.pet-description {	
+				font-size: 13px;
+				@include adaptive-value("padding-top", 30, 10, $large, $medium);
+				@include adaptive-value("padding-bottom", 30, 10, $large, $medium);		
+			}	
+			
+			.pet-list-data__item {
+				padding-bottom: 5px;
+			}
+		}
+
+		@media (max-width: #{$medium - 1 + px}) {
+			justify-content: center;
+			align-items: center;
 			padding: 10px;
+
+			.pet-description {	
+				align-self: flex-start;
+				text-align: justify;
+			}
+
+			.pet-list-data-container {
+				align-self: flex-start;
+				
+				.pet-list-data__item {
+					text-align: start;
+				}
+			}
 		}
 	}
 
@@ -71,7 +140,4 @@
 		opacity: 1;
 		visibility: visible;
 	}
-}
-
-.pets-popup {
 }

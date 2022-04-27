@@ -3,7 +3,10 @@ import { createElement } from './services.js';
 import toggleScroll, { unlock } from './toggleScroll.js';
 
 export function renderPetsPopup(popupContent, pet) {
-	popupContent.innerHTML = '';
+	if (!popupContent.lastElementChild.classList.contains('popup__close')) {
+		popupContent.lastElementChild.remove();
+		popupContent.lastElementChild.remove();
+	}
 
 	const popupImg = createElement('img', 'popup__img');
 	popupImg.src = pet.img;
@@ -18,33 +21,33 @@ export function renderPetsPopup(popupContent, pet) {
 	const breed = createElement('h4', 'title', 'pet-breed');
 	breed.innerHTML = `${pet.type} - ${pet.breed}`;
 
-	const description = createElement('h4', 'title', 'pet-description');
+	const description = createElement('h5', 'title', 'pet-description');
 	description.innerHTML = pet.description;
 
-	const petListData = createElement('ul', 'pet-list-data');
+	const petListData = createElement('ul', 'pet-list-data-container');
 
 
-	let petListDataItem = createElement('li', 'pet-list-data__item');
-	const age = createElement('h5', 'pet-list-data__age');
+	let petListDataItem = createElement('li', 'pet-list-data');
+	const age = createElement('h5', 'title', 'pet-list-data__item');
 	age.innerHTML = `<b>Age:</b> ${pet.age}`;
 	petListDataItem.append(age);
 	petListData.append(petListDataItem);
 
-	petListDataItem = createElement('li', 'pet-list-data__item');
-	const inoculations = createElement('h5', 'pet-list-data__inoculations');
+	petListDataItem = createElement('li', 'pet-list-data');
+	const inoculations = createElement('h5', 'title', 'pet-list-data__item');
 	console.log(pet.inoculations);
 	inoculations.innerHTML = `<b>Inoculations:</b> ${String(pet.inoculations).split(',').join(', ')}`;
 	petListDataItem.append(inoculations);
 	petListData.append(petListDataItem);
 
-	petListDataItem = createElement('li', 'pet-list-data__item');
-	const diseases = createElement('h5', 'pet-list-data__diseases');
+	petListDataItem = createElement('li', 'pet-list-data');
+	const diseases = createElement('h5', 'title', 'pet-list-data__item');
 	diseases.innerHTML = `<b>Diseases:</b> ${String(pet.diseases).split(',').join(', ')}`;
 	petListDataItem.append(diseases);
 	petListData.append(petListDataItem);
 
-	petListDataItem = createElement('li', 'pet-list-data__item');
-	const parasites = createElement('h5', 'pet-list-data__parasites');
+	petListDataItem = createElement('li', 'pet-list-data');
+	const parasites = createElement('h5', 'title', 'pet-list-data__item');
 	parasites.innerHTML = `<b>Parasites:</b> ${String(pet.parasites).split(',').join(', ')}`;
 	petListDataItem.append(parasites);
 	petListData.append(petListDataItem);
