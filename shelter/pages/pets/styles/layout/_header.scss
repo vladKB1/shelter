@@ -81,17 +81,7 @@
 		}
 
 		.blackout {
-			position: fixed;
-			z-index: 1;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 100vw;
-			height: 100vh;
-
-			background: rgba(41, 41, 41, 0.6);	
-			transition: all 0.2s ease-in, height 0s;					
+			@include blackout;							
 		}
 
 		&__content_open {									
@@ -172,6 +162,7 @@
 	&__link {					
 		color: $subtitle-color;		
 		text-decoration: none;
+		cursor: pointer;
 
 		&:hover {
 			color: $dark-subtitle-hover-color;
@@ -179,8 +170,7 @@
 	}
 
 	&__item {
-		position: relative;	
-		cursor: pointer;
+		position: relative;
 
 		&_active {
 			border-bottom: 3px solid $active-color;

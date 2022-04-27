@@ -29,14 +29,8 @@
 
 	@media (max-width: #{$medium - 1 + px}) {		
 		@include adaptive-value("row-gap", 60, 42, $medium, $small);	
-		
-		&__title {
-			font-size: 25px;	
-		}
 	}
 }
-
-$move: -1080;
 
 @keyframes move-right {
 	from {left: 0;}

@@ -10,7 +10,7 @@
         <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
     </head>
     <body>
-        <header class="header">
+        <header class="header lock-padding">
             <div class="container header-container">
                 <div class="header__content">
                     <a class="logo" href="../main/index.html">
@@ -40,117 +40,12 @@
             </div>
         </header>
         <main class="main">
-            <section class="pets-section" id="pets">
+            <section class="pets-section lock-padding" id="pets">
                 <div class="container pets-container">
                     <div class="pets">
                         <h3 class="title pets__title">Our friends who<br />are looking for a house</h3>
                         <div class="pets-slider">
-                            <ul class="pets-slider__list">
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-katrine.png"
-                                            alt="pets-katrine"
-                                        />
-                                        <h4 class="title pets-card__name">Katrine</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-jennifer.png"
-                                            alt="pets-jennifer"
-                                        />
-                                        <h4 class="title pets-card__name">Jennifer</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-woody.png"
-                                            alt="pets-woody"
-                                        />
-                                        <h4 class="title pets-card__name">Woody</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-sophia.png"
-                                            alt="pets-sophia"
-                                        />
-                                        <h4 class="title pets-card__name">Sophia</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-timmy.png"
-                                            alt="pets-timmy"
-                                        />
-                                        <h4 class="title pets-card__name">Timmy</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-charly.png"
-                                            alt="pets-charly"
-                                        />
-                                        <h4 class="title pets-card__name">Charly</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-scarlett.png"
-                                            alt="pets-scarlett"
-                                        />
-                                        <h4 class="title pets-card__name">Scarlett</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="pets-card">
-                                    <a class="pets-card__link" href="#">
-                                        <img
-                                            class="pets-card__photo"
-                                            src="../../assets/images/pets-slider/pets-freddie.png"
-                                            alt="pets-freddie"
-                                        />
-                                        <h4 class="title pets-card__name">Freddie</h4>
-                                        <div class="button-not-fill title button-title pets-card__button">
-                                            Learn more
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                            <ul class="pets-slider__list"></ul>
                         </div>
                         <div class="pagination pets-pagination">
                             <div class="round-button round-button_nonactive pagination__first">
@@ -173,7 +68,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer" id="footer">
+        <footer class="footer lock-padding" id="footer">
             <div class="container footer-container">
                 <div class="footer-content">
                     <div class="footer-content__item contacts">
@@ -204,6 +99,15 @@
                 </div>
             </div>
         </footer>
+
+        <div class="popup popup_pets">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <button class="popup__close round-button"></button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./scripts/index.js"></script>
     </body>
-    <script type="module" src="./scripts/index.js"></script>
 </html>
