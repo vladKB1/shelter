@@ -49,10 +49,11 @@ petsSlider.addEventListener('click', e => {
 
 //popup
 const petsPopup = document.querySelector('.popup_pets');
+const popupContent = document.querySelector('.popup_pets .popup__body .popup__content');
 petsSlider.addEventListener('click', e => {
 	if (e.target.closest('.pets-card')) {
 		const id = e.target.closest('.pets-card').dataset.id;
-		renderPetsPopup(petsPopup, id);
+		renderPetsPopup(popupContent, pets[id]);
 		openPopup(petsPopup, e.target);
 	}
 })
