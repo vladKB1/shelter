@@ -56,11 +56,20 @@ petsSlider.addEventListener('click', e => {
 		renderPetsPopup(popupContent, pets[id]);
 		openPopup(petsPopup, e.target);
 	}
-})
+});
 
 const popupCloseElements = document.querySelectorAll('.popup__close');
 popupCloseElements.forEach(closeElement => {
 	closeElement.addEventListener('click', e => {
 		closePopup(closeElement.closest('.popup'), closeElement);
 	})
-})
+});
+
+petsPopup.addEventListener('mouseover', e => {
+	console.log(e.target);
+	if (!e.target.closest('.popup__content')) {
+		popupCloseElements.forEach(closeElement => closeElement.classList.add('popup__body_hover'));
+	} else {
+		popupCloseElements.forEach(closeElement => closeElement.classList.remove('popup__body_hover'));
+	}
+});
