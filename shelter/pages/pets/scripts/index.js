@@ -4,6 +4,7 @@ import getNewPetsID from './getNewPetsID.js';
 import renderSlide from './renderSlide.js';
 import { preloadPetsImages } from './services.js';
 import { closePopup, openPopup, renderPetsPopup } from './popup.js';
+import paginationHandler from './paginationHandler.js';
 
 export const timeout = 200;
 export const pets = JSON.parse(petsData);
@@ -28,26 +29,16 @@ preloadPetsImages();
 let size = window.innerWidth < 1280 ? 6 : 8;
 size = window.innerWidth < 768 ? 3 : size;
 
-let petsID = getNewPetsID(size);
-//renderSlide(petsID);
+let pagesPetsID = getNewPetsID(size);
+renderSlide(pagesPetsID);
 
-const petsSlider = document.querySelector('.pets-slider');
-// petsSlider.addEventListener('click', e => {
-// 	size = window.innerWidth < 1280 ? 2 : 3;
-// 	size = window.innerWidth < 768 ? 1 : size;
-
-// 	if (e.target.classList.contains('round-button')) {
-// 		if (e.target.classList.contains('left-arrow')) {
-// 			petsID = getNewPetsID(size, petsID);
-// 			renderSlide(petsID, true);
-// 		} else if (e.target.classList.contains('right-arrow')) {
-// 			petsID = getNewPetsID(size, petsID);
-// 			renderSlide(petsID);
-// 		}
-// 	}
-// });
+const pagination = document.querySelector('.pagination.pets-pagination');
+pagination.addEventListener('click', e => {
+	paginationHandler(e.target, size);
+});
 
 //popup
+const petsSlider = document.querySelector('.pets-slider');
 const petsPopup = document.querySelector('.popup_pets');
 const popupContent = document.querySelector('.popup_pets .popup__body .popup__content');
 petsSlider.addEventListener('click', e => {

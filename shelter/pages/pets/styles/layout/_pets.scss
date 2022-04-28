@@ -6,16 +6,16 @@
 
 	@media (max-width: #{$large - 1 + px}) {
 		@include adaptive-value("padding-bottom", 100, 76, $large, $medium);	
-		@include adaptive-value("padding-left", 40, 30, $large, $medium);
-		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+		@include adaptive-value("padding-left", 350, 94, $large, $medium);
+		@include adaptive-value("padding-right", 350, 94, $large, $medium);
 	}
 
 	@media (max-width: #{$medium - 1 + px}) {
 		@include adaptive-value("padding-top", 200, 162, $medium, $small);
 		@include adaptive-value("padding-bottom", 70, 42, $medium, $small);
 
-		@include adaptive-value("padding-left", 30, 10, $medium, $small);
-		@include adaptive-value("padding-right", 30, 10, $medium, $small);
+		@include adaptive-value("padding-left", 234, 10, $medium, $small);
+		@include adaptive-value("padding-right", 234, 10, $medium, $small);
 	}
 }
 
@@ -44,26 +44,26 @@
 
 	&__list {
 		position: relative;	
+		left: 0px;
 		display: grid;
 		grid-template-columns: repeat(24, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-auto-flow: column;
 		gap: 30px 40px;		
-		width: 100%;
+		width: 100%;		
 	}
 
 	@media (max-width: #{$large - 1 + px}) {
-		padding: 0 64px;
-
 		&__list {		
 			grid-template-columns: repeat(16, 1fr);
 			grid-template-rows: repeat(3, 1fr);
 		}		
 	}
 
-	@media (max-width: #{$medium - 1 + px}) {		
-		padding: 0 15px;
+	@media (max-width: #{$medium - 1 + px}) {				
+		padding-left: 15px;
 	}
+
 }
 
 .pets-card {

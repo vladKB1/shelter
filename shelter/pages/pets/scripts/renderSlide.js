@@ -14,8 +14,8 @@ function slideAnimation(className, reverse) {
 	}, timeout);
 }
 
-export default function renderSlide(petsID) {
-	petsID.forEach(ID => {
-		petsSlider.append(createPetCard(pets[ID]));
+export default function renderSlide(pagesPetsID) {
+	pagesPetsID.forEach(page => {
+		page.forEach(card => petsSlider.append(createPetCard(pets[card])));
 	});
 }

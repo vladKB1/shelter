@@ -64,7 +64,6 @@ export default function getNewPetsID(size) {
 		}
 	}
 
-	console.log(pages);
 	return pages;
 }
 

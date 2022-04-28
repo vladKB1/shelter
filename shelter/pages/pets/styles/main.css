@@ -756,8 +756,8 @@ body {
 @media (max-width: 1279px) {
   .pets-container {
     padding-bottom: calc(76px + 24 * ((100vw - 768px) / 512));
-    padding-left: calc(30px + 10 * ((100vw - 768px) / 512));
-    padding-right: calc(30px + 10 * ((100vw - 768px) / 512));
+    padding-left: calc(94px + 256 * ((100vw - 768px) / 512));
+    padding-right: calc(94px + 256 * ((100vw - 768px) / 512));
   }
 }
 
@@ -765,8 +765,8 @@ body {
   .pets-container {
     padding-top: calc(162px + 38 * ((100vw - 320px) / 448));
     padding-bottom: calc(42px + 28 * ((100vw - 320px) / 448));
-    padding-left: calc(10px + 20 * ((100vw - 320px) / 448));
-    padding-right: calc(10px + 20 * ((100vw - 320px) / 448));
+    padding-left: calc(10px + 224 * ((100vw - 320px) / 448));
+    padding-right: calc(10px + 224 * ((100vw - 320px) / 448));
   }
 }
 
@@ -823,6 +823,7 @@ body {
 
 .pets-slider__list {
   position: relative;
+  left: 0px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[24];
@@ -835,9 +836,6 @@ body {
 }
 
 @media (max-width: 1279px) {
-  .pets-slider {
-    padding: 0 64px;
-  }
   .pets-slider__list {
     -ms-grid-columns: (1fr)[16];
         grid-template-columns: repeat(16, 1fr);
@@ -848,7 +846,7 @@ body {
 
 @media (max-width: 767px) {
   .pets-slider {
-    padding: 0 15px;
+    padding-left: 15px;
   }
 }
 
