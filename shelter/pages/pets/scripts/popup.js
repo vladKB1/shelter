@@ -35,7 +35,6 @@ export function renderPetsPopup(popupContent, pet) {
 
 	petListDataItem = createElement('li', 'pet-list-data');
 	const inoculations = createElement('h5', 'title', 'pet-list-data__item');
-	console.log(pet.inoculations);
 	inoculations.innerHTML = `<b>Inoculations:</b> ${String(pet.inoculations).split(',').join(', ')}`;
 	petListDataItem.append(inoculations);
 	petListData.append(petListDataItem);

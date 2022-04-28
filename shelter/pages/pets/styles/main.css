@@ -341,6 +341,11 @@ body {
   min-height: 100%;
 }
 
+.popup__body_hover {
+  border: 2px solid #FDDCC4;
+  background-color: #FDDCC4;
+}
+
 .popup__content {
   position: relative;
   display: -webkit-box;

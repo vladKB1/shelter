@@ -10,6 +10,11 @@
 	&__body {		
 		@include flex(center, center, column);
 		min-height: 100%;
+
+		&_hover {
+			border: 2px solid $hover-button-bg;
+			background-color: $hover-button-bg;
+		}
 	}
 
 	&__content {
