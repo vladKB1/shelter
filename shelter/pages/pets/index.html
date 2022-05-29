@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shelter</title>
+
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <header class="header lock-padding">
+            <div class="container header-container">
+                <div class="header__content">
+                    <a class="logo" href="../main/index.html">
+                        <h1 class="title logo__title">Cozy House</h1>
+                        <p class="subtitle logo__subtitle">Shelter for pets in Boston</p>
+                    </a>
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li class="nav-list__item">
+                                <a class="subtitle nav-list__link" href="../main/index.html"> About the shelter </a>
+                            </li>
+                            <li class="nav-list__item nav-list__item_active">
+                                <a class="subtitle nav-list__link" href="#">Our pets</a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a class="subtitle nav-list__link" href="../main/index.html#help">Help the shelter</a>
+                            </li>
+                            <li class="nav-list__item">
+                                <a class="subtitle nav-list__link" href="#footer">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__burger">
+                        <span class="burger__line"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="pets-section lock-padding" id="pets">
+                <div class="container pets-container">
+                    <div class="pets">
+                        <h3 class="title pets__title">Our friends who<br />are looking for a house</h3>
+                        <div class="pets-slider">
+                            <ul class="pets-slider__list"></ul>
+                        </div>
+                        <div class="pagination pets-pagination">
+                            <div class="round-button round-button_nonactive pagination__first">
+                                <h4 class="title"><<</h4>
+                            </div>
+                            <div class="round-button round-button_nonactive pagination__left">
+                                <h4 class="title"><</h4>
+                            </div>
+                            <div class="round-button pagination__index">
+                                <h4 class="title">1</h4>
+                            </div>
+                            <div class="round-button pagination__right">
+                                <h4 class="title">></h4>
+                            </div>
+                            <div class="round-button pagination__last">
+                                <h4 class="title">>></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer lock-padding" id="footer">
+            <div class="container footer-container">
+                <div class="footer-content">
+                    <div class="footer-content__item contacts">
+                        <h3 class="title title_light cotacts__title">For questions and suggestions</h3>
+                        <a class="contacts__email" href="mailto:email@shelter.com">
+                            <div class="email-icon"></div>
+                            <h4 class="title email-link">email@shelter.com</h4>
+                        </a>
+                        <a class="contacts__tel" href="tel:+136745677554">
+                            <div class="tel-icon"></div>
+                            <h4 class="title tel-link">+13 674 567 75 54</h4>
+                        </a>
+                    </div>
+                    <div class="footer-content__item location">
+                        <h3 class="title title_light location__title">We are waiting for your visit</h3>
+                        <a class="location__item" target="_blank" href="https://goo.gl/maps/Nd3vCdR5hA9mJqNJ8">
+                            <div class="location-icon"></div>
+                            <h4 class="title location-address">
+                                1 Central Street, Boston<br />(entrance from the store)
+                            </h4>
+                        </a>
+                        <a class="location__item" target="_blank" href="https://goo.gl/maps/wVuwAP1SpZK8TBHQ6">
+                            <div class="location-icon"></div>
+                            <h4 class="title location-address">18 South Park, London</h4>
+                        </a>
+                    </div>
+                    <img class="footer-content__img" src="../../assets/images/footer-puppy.png" alt="puppy" />
+                </div>
+            </div>
+        </footer>
+
+        <div class="popup popup_pets">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <button class="popup__close round-button"></button>
+                </div>
+            </div>
+        </div>
+
+        <script type="module" src="./scripts/index.js"></script>
+    </body>
+</html>

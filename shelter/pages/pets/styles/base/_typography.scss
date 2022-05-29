@@ -1,0 +1,76 @@
+@font-face {
+	font-family: Arial;
+	src: url('../../../assets/fonts/arial.ttf');
+}
+
+@font-face {
+	font-family: Georgia;
+	src: url('../../../assets/fonts/georgia.ttf');
+}
+
+.title {
+	margin: 0;
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 130%;	
+	letter-spacing: 0.06em;
+
+	color: $title-color;
+
+	@media (max-width: #{$medium - 1 + px}) {
+		text-align: center;						
+		@include adaptive-value("font-size", 35, 25, $medium, $small);			
+	}
+}
+
+.button-title {
+	font-size: 17px;		
+	text-decoration: none;
+}
+
+h2.title {
+	font-size: 44px; 
+	letter-spacing: normal;
+
+	@media (max-width: #{$medium - 1 + px}) {						
+		@include adaptive-value("font-size", 44, 25, $medium, $small);		
+		letter-spacing: 0.06em;	
+	}
+}
+
+h4.title {		
+	font-size: 20px;
+	line-height: 115%;
+}	
+
+h5.title {		
+	font-size: 15px;
+	line-height: 110%;
+}	
+
+.title_light {
+	color: $light-title-color;
+}
+
+.subtitle {
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 160%;
+
+	color: $subtitle-color;
+
+	&-s {
+		font-style: italic; 
+		font-size: 12px;
+		line-height: 150%;
+		color: $subtitle-s-color;
+	}
+}
+
+.subtitle_light {
+	color: $light-subtitle-color;
+}

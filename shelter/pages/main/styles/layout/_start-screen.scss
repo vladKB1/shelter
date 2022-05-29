@@ -1,0 +1,79 @@
+.start-screen-section {
+	padding-top: 180px;
+
+	background: url('../../../assets/images/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;	
+	background-repeat: repeat;	
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-top", 180, 150, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		padding-top: 150px;
+	}
+}
+
+.start-screen-container {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-left", 302, 100, $large, $medium);
+		@include adaptive-value("padding-right", 302, 100, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		@include adaptive-value("padding-left", 100, 10, $medium, $small);
+		@include adaptive-value("padding-right", 100, 10, $medium, $small);
+	}
+}
+
+.start-screen {
+	@include flex(space-between, flex-start);	
+	column-gap: 42px;	
+
+	&__content {
+		@include flex(space-between, flex-start, column);
+		row-gap: 42px;
+		padding-top: 163px;
+	}	
+
+	&__img {		
+		position: relative;				
+		max-width: none;
+	}
+
+	@media (max-width: #{$large - 1 + px}) {		
+		flex-direction: column;
+		row-gap: 100px;
+
+		&__content {
+			padding-top: 0;	
+			@include adaptive-value("padding-left", 108, 54, $large, $medium);
+			@include adaptive-value("padding-right", 108, 54, $large, $medium);	
+			
+			.button {
+				align-self: center;
+			}
+		}
+		
+		&__img {				
+			@include adaptive-value("left", 280, 70, $large, $medium);
+		}
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {				
+		row-gap: 105px;
+		text-align: center;
+
+		&__content {
+			align-items: center;			
+			@include adaptive-value("padding-left", 54, 0,  $medium, $small);
+			@include adaptive-value("padding-right", 54, 0, $medium, $small);						
+		}
+				
+		&__img {				
+			@include adaptive-value("left", 280, 40, $medium, $small);
+		}
+	}
+}

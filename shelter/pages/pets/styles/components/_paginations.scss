@@ -1,0 +1,29 @@
+.pagination {
+	@include flex(space-between);
+	column-gap: 20px;
+	text-align: center;
+
+	&__first {}
+
+	&__left {}
+
+	&__index {
+		border: none;
+		background-color: $button-bg;
+		cursor: default;
+
+		&:hover {
+			background-color: $button-bg;
+			border: none;
+		}
+	}
+
+	&__right {}
+
+	&__last {}
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		@include adaptive-value("column-gap", 20, 10, $medium, $small);
+	}
+}
+

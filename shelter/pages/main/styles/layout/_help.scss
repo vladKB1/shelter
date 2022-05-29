@@ -1,0 +1,83 @@
+.help-container {
+	padding: 80px 40px 100px 40px;
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("padding-left", 40, 69, $large, $medium);
+		@include adaptive-value("padding-right", 40, 69, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {
+		@include adaptive-value("padding-top", 80, 42, $medium, $small);
+		@include adaptive-value("padding-bottom", 80, 42, $medium, $small);
+
+		@include adaptive-value("padding-left", 69, 15, $medium, $small);
+		@include adaptive-value("padding-right", 69, 15, $medium, $small);
+	}
+}
+
+.help {
+	@include flex(space-between, center, column);
+	row-gap: 60px;
+
+	&__title {
+		text-align: center;
+		align-content: center;
+	}
+
+	@media (max-width: #{$medium - 1 + px}) { 
+		@include adaptive-value("row-gap", 60, 42, $medium, $small);
+	}
+}
+
+.help-list {
+	@include flex(center);
+	gap: 55px 120px;
+	flex-wrap: wrap;
+	padding: 0 87px;
+
+	&__item {
+		@include flex(space-between, center, column);		
+		row-gap: 30px;		
+	}
+
+	@media (max-width: #{$large - 1 + px}) {
+		@include adaptive-value("column-gap", 120, 60, $large, $medium);
+		@include adaptive-value("padding-left", 87, 0, $large, $medium);
+		@include adaptive-value("padding-right", 87, 0, $large, $medium);
+
+		&__item {
+			width: 170px;
+		}
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("column-gap", 55, 30, $medium, $small);
+		@include adaptive-value("row-gap", 55, 30, $medium, $small);
+		padding: 0;
+
+		&__item {
+			@include adaptive-value("row-gap", 30, 20, $medium, $small);		
+			width: 130px;
+
+			h4.help-icon__title {
+				@include adaptive-value("font-size", 20, 15, $medium, $small);
+				line-height: 110%;
+			}			
+		}		
+	}
+
+	@media (max-width: #{$small + px}) {		
+		justify-content: flex-start;		
+	}
+}
+
+.help-icon {
+	@include flex(center, center);
+	width: 60px;
+	height: 60px;			
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		@include adaptive-value("width", 60, 50, $medium, $small);
+		@include adaptive-value("height", 60, 50, $medium, $small);	
+	}
+}

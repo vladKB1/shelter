@@ -1,0 +1,25 @@
+@mixin flex($content: flex-start, $align: center, $direction: row) {
+	display: flex;
+	justify-content: $content;
+	align-items: $align;
+	flex-direction: $direction;
+}
+
+@mixin adaptive-value($property, $startSize, $minSize, $maxWidth, $minWidth) {
+	$addSize: $startSize - $minSize;	
+	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth - $minWidth}));
+}
+
+@mixin blackout {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+
+	background: rgba(41, 41, 41, 0.6);	
+	transition: all 0.2s ease-in, height 0s;
+}

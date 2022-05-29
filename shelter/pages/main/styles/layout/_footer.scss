@@ -1,0 +1,121 @@
+.footer {
+	background: url('../../../assets/images/noise_transparent@2x.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;	
+	background-repeat: repeat;
+}
+
+.footer-container {
+	padding: 40px 40px 0px;
+
+	@media (max-width: #{$large - 1 + px}) {	
+		@include adaptive-value("padding-top", 40, 30, $large, $medium);
+		@include adaptive-value("padding-left", 40, 30, $large, $medium);
+		@include adaptive-value("padding-right", 40, 30, $large, $medium);
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		padding-top: 30px;
+		@include adaptive-value("padding-left", 30, 10, $medium, $small);
+		@include adaptive-value("padding-right", 30, 10, $medium, $small);
+	}
+}
+
+.footer-content {
+	@include flex(space-between, flex-start);	
+	gap: 65px 160px;
+
+	a {
+		text-decoration: none;
+	}
+
+	&__item {
+		@include flex(space-between, flex-start, column);		
+		row-gap: 40px;
+		margin-top: 16px;		
+	}
+
+	@media (max-width: #{$large - 1 + px}) {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 65px 60px;
+
+		&__item {
+			margin: 0;					
+		}
+	}
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		@include adaptive-value("row-gap", 65, 40, $medium, $small);
+		
+		&__img {
+			@include adaptive-value("width", 300, 260, $medium, $small);
+		}
+	}
+}
+
+.contacts {
+	max-width: 280px;
+
+	&__email, &__tel {
+		@include flex(space-between);
+		column-gap: 20px;
+		cursor: pointer;		
+	}		
+
+	@media (max-width: #{$medium - 1 + px}) {		
+		align-items: center;
+	}
+}
+
+.contacts-title,
+.location__title {
+	@media (max-width: #{$medium - 1 + px}) {
+		padding: 0 15px;
+	}
+}
+
+.email-icon {
+	width: 40px;
+	height: 32px;
+	background-image: url("../../../assets/icons/icon-email.svg");	
+}
+
+.tel-icon {
+	width: 40px;
+	height: 32px;
+	background-image: url("../../../assets/icons/icon-phone.svg")	
+}
+
+.location {	
+	row-gap: 33px;
+	max-width: 302px;
+	
+	&__item {
+		@include flex(space-between);
+		column-gap: 20px;
+		cursor: pointer;
+		text-decoration: none;
+	}	
+
+	@media (max-width: #{$medium - 1 + px}) {	
+		@include adaptive-value("row-gap", 33, 40, $medium, $small);
+
+		&__title {	
+			align-self: center;
+		}
+	}
+}
+
+.location-icon {
+	width: 22px;
+	height: 32px;
+	background-image: url("../../../assets/icons/icon-marker.svg");	
+}
+
+
+.email-icon, .tel-icon, .location-icon {		
+	background-repeat: no-repeat;
+}
+
+.email-link, .tel-link, .location-address {
+	color: $footer-title-color;
+}
